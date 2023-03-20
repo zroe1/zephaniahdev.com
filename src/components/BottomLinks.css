@@ -1,0 +1,27 @@
+.bottom-links {
+  z-index: 100;
+  position: absolute;
+  bottom: 1px;
+  width: 100vw;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  padding: 0px;
+  height: 31px;
+}
+.logo {
+  width: 35px;
+}
+.logo22 {
+  width: 25px;
+  margin-right: 4px;
+}
+.logo3 {
+  width: 32px;
+  margin-right: 4px;
+  position: relative;
+  bottom: 2px;
+}

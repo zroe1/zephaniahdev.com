@@ -1,0 +1,12 @@
+.instruction-text2 {
+  background-color: blue;
+  text-align: center;
+  z-index: 100;
+  position: absolute;
+  width: 100vw;
+}
+@media only screen and (max-width: 600px) {
+  .instruction-text2 {
+    display: none;
+  }
+}

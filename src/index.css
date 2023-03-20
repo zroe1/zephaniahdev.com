@@ -1,0 +1,15 @@
+* {font-family: 'Roboto Mono', monospace;}
+
+.root-container {
+  height: 100vh;
+  padding: 0px;
+  margin: 0px;
+}
+.container {
+  height: 100vh;
+  width: 50vw;
+}
+h1 {
+  font-size: 24px;
+  z-index: 5;
+}
