@@ -28,6 +28,7 @@ p {
 
     .text-container {
       height: 160px;
+      top: calc(50% - 80px);
     }
 
 } 
