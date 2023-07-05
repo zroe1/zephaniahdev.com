@@ -2,6 +2,7 @@ import React from 'react'
 import './CenterText.css'
 import READMEButton from './READMEButton'
 
+
 const CenterText = (props) => {
   return (
     <div className='text-container' style={{color: props.color}}>

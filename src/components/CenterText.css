@@ -7,8 +7,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  left: calc(50vw - 150px);
-  top: calc(50vh - 90px);
+  left: calc(50% - 150px);
+  top: calc(50% - 90px);
   z-index: 1;
 }
 button {
