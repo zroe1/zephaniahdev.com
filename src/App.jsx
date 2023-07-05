@@ -46,6 +46,7 @@ export default function App() {
   }
   const backgroundStyle = {
     backgroundColor: backgroundColor,
+    height: window.innerHeight,
   }
 
   return (
