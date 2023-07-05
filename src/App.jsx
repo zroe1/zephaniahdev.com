@@ -13,11 +13,17 @@ function Box({color}) {
     if (!meshRef.current) {
       return;
     }
-    meshRef.current.rotation.y += 0.006;
+    // meshRef.current.rotation.y += 0.006;
   })
+  let meshArgs;
+  if (window.innerWidth < 600) {
+    meshArgs = [2.0, .6, 16, 100];
+  } else {
+    meshArgs = [2.2, .7, 16, 100];
+  }
   return (
     <mesh ref={meshRef}>
-      <torusBufferGeometry attach='geometry' args={[2.2, .7, 16, 100]}/>
+      <torusBufferGeometry attach='geometry' args={meshArgs}/>
       <meshBasicMaterial attach='material' color={color} wireframe/>
     </mesh>
   );

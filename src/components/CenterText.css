@@ -19,3 +19,15 @@ button {
 p {
   font-size: 13px;
 }
+
+@media only screen and (max-width: 600px) {
+    
+    p {
+      font-size: 10px;
+    }
+
+    .text-container {
+      height: 160px;
+    }
+
+} 

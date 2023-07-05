@@ -13,3 +13,11 @@ h1 {
   font-size: 24px;
   z-index: 5;
 }
+
+@media only screen and (max-width: 600px) {
+    
+    h1 {
+      font-size: 18px;
+    }   
+
+  } 
