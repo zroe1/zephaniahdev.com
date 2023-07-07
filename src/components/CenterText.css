@@ -19,8 +19,26 @@ button {
 p {
   font-size: 13px;
 }
+.quote {
+    font-size: 16px;
+    padding: 4px;
+    margin-bottom: 5px;
+    width: 80%;
+    font-weight: bold;
+    text-align: center;
+}
+
+.quote-credit {
+    font-size: 11px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
 
 @media only screen and (max-width: 600px) {
+/* 
+    .interests {
+        display: none;
+    } */
     
     p {
       font-size: 10px;

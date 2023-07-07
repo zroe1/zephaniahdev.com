@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+
+.center-button {
+    width: 45%;
+    height: 20%;
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 15px;
+    border: none;
+}

@@ -17,6 +17,7 @@ const BottomLinks = () => {
       <a href='https://github.com/zroe1' target='_blank'>
         <img className='logo logo3 bottom-link' src={github} alt="leetcode logo" />
       </a>
+      <Button className='bottom-link' buttonText='README'/>
       <Button className='bottom-link' buttonText='Old Site'/>
     </div>
   )
