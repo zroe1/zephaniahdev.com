@@ -1,8 +1,6 @@
 import React, { useState } from "react"
 import './CenterText.css'
 import './ClickHereButton.css'
-import ClickHereButton from './ClickHereButton'
-
 
 const CenterText = (props) => {
   const [rotation, setRotation] = useState(0);

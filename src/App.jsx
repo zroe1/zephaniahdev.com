@@ -5,6 +5,7 @@ import CenterText from './components/CenterText'
 import ColorSelectors from './components/ColorSelector';
 import InstructionText from './components/InstructionText';
 import BottomLinks from './components/BottomLinks';
+import Menu from './components/Menu'
 import './index.css'
 
 function Box({color, rotation}) {
@@ -70,11 +71,6 @@ export default function App() {
   const centerTextStyle = {
     display: 'none',
   }
-  // if (ShapeRotation != 0) {
-  //   centerTextStyle = {
-  //     display: 'none',
-  //   }
-  // }
 
   return (
     <div className='root-container' style={backgroundStyle}>
@@ -82,6 +78,7 @@ export default function App() {
       <BottomLinks />
       <ColorSelectors color={TextColor} handleBackgroundChange={setBackground} handleShapeChange={setShape} handleTextChange={setText}/>
       {ShapeRotation == 0 && <CenterText color={TextColor} handleRotationChange={setRotation}/>}
+      {ShapeRotation != 0 && <Menu/>}
       <Canvas >
         <OrbitControls />
         <Stars/>
