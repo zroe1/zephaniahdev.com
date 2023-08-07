@@ -15,7 +15,9 @@
 }
 
 .menu-item {
-  background-color: black;
+  background-color: white;
+  opacity: 0.0;
+  z-index: 10;
 
   width: 30%;
   height: 90%;
@@ -64,9 +66,8 @@
 
 
 @keyframes menuFade {
-  0% {background-color: black; z-index: initial;}
-  99% {background-color: white; z-index: initial;}
-  100% {background-color: white; z-index: 10;}
+  0% {opacity: 0;}
+  100% {opacity: 1.0;}
 }
 
 @media only screen and (max-width: 600px) {
