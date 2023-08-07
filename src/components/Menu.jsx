@@ -24,13 +24,13 @@ const Menu = (props) => {
       </div>}
 
       {isPortfolioSelected && <div className="test">
-        <a className="menu-item"  id="portfolio" href="https://docs.google.com/document/d/13v9_JG2TeXQJmx2OnifMUYJrlVzoWrazk1Un0m4iyGE/edit?usp=sharing" target="_blank">
+        <a className="menu-item"  id="portfolio" href="https://github.com/zroe1" target="_blank">
           Github
         </a>
-        <a className="menu-item"  id="resume" href="https://docs.google.com/document/d/13v9_JG2TeXQJmx2OnifMUYJrlVzoWrazk1Un0m4iyGE/edit?usp=sharing" target="_blank">
+        <a className="menu-item"  id="resume" href="https://leetcode.com/zroe1/" target="_blank">
           Leetcode
         </a>
-        <a className="menu-item"  id="productivity" href="https://docs.google.com/document/d/13v9_JG2TeXQJmx2OnifMUYJrlVzoWrazk1Un0m4iyGE/edit?usp=sharing" target="_blank">
+        <a className="menu-item"  id="productivity" href="https://www.linkedin.com/in/zephaniahroe/" target="_blank">
           LinkedIn
         </a>
       </div>}
