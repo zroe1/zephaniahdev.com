@@ -23,6 +23,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 
   font-weight: bold;
   font-size: 20px;
@@ -37,14 +38,14 @@
 
 #portfolio {
   animation-name: menuFade;
-  animation-duration: 4.5s;
+  animation-duration: 3s;
   animation-delay: 0.2s;
   animation-fill-mode: forwards;
 }
 
 #resume {
   animation-name: menuFade;
-  animation-duration: 4.5s;
+  animation-duration: 3s;
   animation-delay: 0.45s;
   animation-fill-mode: forwards;
 }
@@ -52,21 +53,25 @@
 
 #productivity {
   animation-name: menuFade;
-  animation-duration: 4.5s;
+  animation-duration: 3s;
   animation-delay: 0.71s;
   animation-fill-mode: forwards;
 }
 
+#productivity-coming-soon {
+  font-size: 13px;
+}
+
+
 @keyframes menuFade {
-  0% {background-color: black;}
-  100% {background-color: white;}
+  0% {background-color: black; z-index: initial;}
+  99% {background-color: white; z-index: initial;}
+  100% {background-color: white; z-index: 10;}
 }
 
 @media only screen and (max-width: 600px) {
 
   .test {
-    /* width: 80vw;
-    left: 10vw; */
     height: 300px;
     flex-direction: column;
   }  

@@ -22,7 +22,7 @@ function Box({color, rotation}) {
     }
     meshRef.current.rotation.y += rotation;
     setRotation(rotation);
-    console.log(totalRotation);
+    // console.log(totalRotation);
   })
 
   //  sets the arguments for the mesh depending on the window size
