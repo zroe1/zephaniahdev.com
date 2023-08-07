@@ -12,12 +12,11 @@ const Menu = (props) => {
     <div>
       {!isPortfolioSelected && <div className="test">
         <div className="menu-item" id="portfolio" onClick={redeclareIsPortfolioSelected}>
-          {/* <button onClick={readMeAlert}>Portfolio</button> */}
           Portfolio
         </div>
-        <div className="menu-item" id="resume">
-          Resume
-        </div>
+        <a className="menu-item"  id="resume" href="https://docs.google.com/document/d/13v9_JG2TeXQJmx2OnifMUYJrlVzoWrazk1Un0m4iyGE/edit?usp=sharing" target="_blank">
+            Resume
+        </a>
         <div className="menu-item" id="productivity">
           Productivity
           <p id="productivity-coming-soon">coming soon...</p>
@@ -25,15 +24,15 @@ const Menu = (props) => {
       </div>}
 
       {isPortfolioSelected && <div className="test">
-        <div className="menu-item" id="portfolio">
+        <a className="menu-item"  id="portfolio" href="https://docs.google.com/document/d/13v9_JG2TeXQJmx2OnifMUYJrlVzoWrazk1Un0m4iyGE/edit?usp=sharing" target="_blank">
           Github
-        </div>
-        <div className="menu-item" id="resume">
+        </a>
+        <a className="menu-item"  id="resume" href="https://docs.google.com/document/d/13v9_JG2TeXQJmx2OnifMUYJrlVzoWrazk1Un0m4iyGE/edit?usp=sharing" target="_blank">
           Leetcode
-        </div>
-        <div className="menu-item" id="productivity">
+        </a>
+        <a className="menu-item"  id="productivity" href="https://docs.google.com/document/d/13v9_JG2TeXQJmx2OnifMUYJrlVzoWrazk1Un0m4iyGE/edit?usp=sharing" target="_blank">
           LinkedIn
-        </div>
+        </a>
       </div>}
     </div>
   )
