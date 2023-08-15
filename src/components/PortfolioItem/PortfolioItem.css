@@ -1,0 +1,42 @@
+.portfolio-item {
+  background-color: white;
+  opacity: 0.0;
+  z-index: 10;
+
+  width: calc(30% - 40px);
+  height: calc(90% - 40px);
+
+  font-weight: bold;
+  font-size: 20px;
+
+  border-radius: 20px;
+  padding: 20px;
+
+  text-decoration: none;
+  color: black;
+}
+
+.menu-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.portfolio-divider {
+  width: 50%;
+  height: 2px;
+  background-color: black;
+}
+
+.portfolio-item-status {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .portfolio-item {
+    width: 100%;
+    height: calc(115px - 40px);
+  }
+
+} 
+  

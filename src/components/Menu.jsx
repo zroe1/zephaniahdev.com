@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import PortfolioItem from "./PortfolioItem/PortfolioItem";
 import './Menu.css'
 
 const Menu = (props) => {
@@ -24,15 +25,12 @@ const Menu = (props) => {
       </div>}
 
       {isPortfolioSelected && <div className="test">
-        <a className="menu-item"  id="portfolio" href="https://github.com/zroe1" target="_blank">
+        {/* <a className="menu-item"  id="portfolio" href="https://github.com/zroe1" target="_blank">
           Github
-        </a>
-        <a className="menu-item"  id="resume" href="https://leetcode.com/zroe1/" target="_blank">
-          Leetcode
-        </a>
-        <a className="menu-item"  id="productivity" href="https://www.linkedin.com/in/zephaniahroe/" target="_blank">
-          LinkedIn
-        </a>
+        </a> */}
+        <PortfolioItem id="portfolio" itemName={"tinyfilter"}/>
+        <PortfolioItem id="resume" itemName={"roestories"}/>
+        <PortfolioItem id="productivity" itemName={"LinkedIn"}/>
       </div>}
     </div>
   )
