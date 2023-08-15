@@ -1,0 +1,47 @@
+.returnHome {
+    position:absolute;
+    /* top: 100px; */
+    top: calc(50% + 150px);
+    left: calc(50% - 70px);
+    z-index: 5;
+    width: 140px;
+    height: 30px;
+    font-weight: 700;
+    font-size: 12px;
+    border-radius: 5px;
+    border: none;
+    color: black;
+    opacity: 0;
+
+    animation-name: returnHomeBtn;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes returnHomeBtn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@media only screen and (max-width: 875px) {
+
+    .menu-container {
+      top: calc(50% - 200px);
+      height: 400px;
+      flex-direction: column;
+    }
+
+    .returnHome {
+        /* position:absolute; */
+        /* top: 100px; */
+        top: calc(50% + 200px);
+    }
+
+  
+    .menu-item {
+      width: 100%;
+      height: 115px;
+    }
+  
+  } 

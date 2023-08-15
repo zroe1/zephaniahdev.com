@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { OrbitControls, Stars } from '@react-three/drei'
 import CenterText from './components/CenterText'
@@ -6,10 +6,16 @@ import ColorSelectors from './components/ColorSelector';
 import InstructionText from './components/InstructionText';
 import BottomLinks from './components/BottomLinks';
 import Menu from './components/Menu'
+import ReturnToHomeBtn from './components/ReturnToHomeBtn/ReturnToHomeBtn';
 import './index.css'
 
 function Box({color, rotation}) {
   const [totalRotation, setTotalRotation] = useState(0);
+
+  useEffect (() => {
+    console.log("useEffect worked!");
+    setTotalRotation(0);
+  }, [rotation])
 
   const setRotation = (newRotation) => {
     setTotalRotation(totalRotation + newRotation)
@@ -22,7 +28,6 @@ function Box({color, rotation}) {
     }
     meshRef.current.rotation.y += rotation;
     setRotation(rotation);
-    // console.log(totalRotation);
   })
 
   //  sets the arguments for the mesh depending on the window size
@@ -72,13 +77,17 @@ export default function App() {
     display: 'none',
   }
 
+  const goHome = () => {
+    setShapeRotation(0);
+  }
+
   return (
     <div className='root-container' style={backgroundStyle}>
       <InstructionText color={TextColor}/>
       <BottomLinks />
       <ColorSelectors color={TextColor} handleBackgroundChange={setBackground} handleShapeChange={setShape} handleTextChange={setText}/>
       {ShapeRotation == 0 && <CenterText color={TextColor} handleRotationChange={setRotation}/>}
-      {ShapeRotation != 0 && <Menu/>}
+      {ShapeRotation != 0 && <><Menu/> <ReturnToHomeBtn handleGoHome={goHome}/></>}
       <Canvas >
         <OrbitControls />
         <Stars/>
