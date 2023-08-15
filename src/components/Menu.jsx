@@ -28,9 +28,18 @@ const Menu = (props) => {
         {/* <a className="menu-item"  id="portfolio" href="https://github.com/zroe1" target="_blank">
           Github
         </a> */}
-        <PortfolioItem id="portfolio" itemName={"tinyfilter"}/>
-        <PortfolioItem id="resume" itemName={"roestories"}/>
-        <PortfolioItem id="productivity" itemName={"LinkedIn"}/>
+        <PortfolioItem id="portfolio" itemName={"tinyfilter"} 
+                        status={"Version 1.0.1 (stable release 8/7/2023)"}
+                        discription={"tinyfilter converts images into ASCII art using the principles of CNNs (convolutional neural networks)."}
+                        link={"https://github.com/zroe1/tinyfilter"}/>
+        <PortfolioItem id="resume" itemName={"roestories"}
+                        status={"Completed for release on 7/19/2023"}
+                        discription={"a portfolio website for my dad, featuring all his work from the over 30 years he spent in journalism."}
+                        link={"https://roestories.com/"}/>
+        <PortfolioItem id="productivity" itemName={"MIT 6.S191"}
+                        status={"Completed August 9, 2023"}
+                        discription={"I took this class (Introduction to Deep Learning) durring the 2023 summer to self-study AI and neural networks."}
+                        link={"https://github.com/zroe1/MIT-6.S191"}/>
       </div>}
     </div>
   )

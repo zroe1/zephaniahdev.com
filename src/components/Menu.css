@@ -74,7 +74,7 @@
   100% {opacity: 1.0;}
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 875px) {
 
   .test {
     top: calc(50% - 200px);
