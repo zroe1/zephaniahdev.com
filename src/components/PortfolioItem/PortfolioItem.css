@@ -44,6 +44,11 @@
     padding: 10px;
   }
 
+  .portfolio-item:hover {
+    /* border-radius: 20px; */
+    padding: 10px;
+  }
+
   .menu-title {
     font-size: 15px;
   }
