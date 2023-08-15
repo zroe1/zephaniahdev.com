@@ -1,9 +1,11 @@
 import React from "react";
 import './Button.css'
 
+// href="https://zephyroe.github.io"
+
 const Button = (props) => {
   return (
-    <a className='button' href="https://zephyroe.github.io" target="_blank">{props.buttonText}</a>
+    <a className='button' href={props.link} target="_blank">{props.buttonText}</a>
   )
 }
 
