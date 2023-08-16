@@ -1,7 +1,8 @@
 import React, { useState } from "react"
 import PortfolioItem from "./PortfolioItem/PortfolioItem";
 import './Menu.css'
-// import ReturnToHomeBtn from "./ReturnToHomeBtn/ReturnToHomeBtn";
+import RightArrow from "./Arrows/RightArrow/RightArrow";
+import LeftArrow from "./Arrows/LeftArrow/LeftArrow";
 
 const Menu = (props) => {
   const [isPortfolioSelected, setIsPortfolioSelected] = useState(false);
@@ -38,6 +39,8 @@ const Menu = (props) => {
                         status={"Completed August 9, 2023"}
                         discription={"I took this class (Introduction to Deep Learning) durring the 2023 summer to self-study AI and neural networks."}
                         link={"https://github.com/zroe1/MIT-6.S191"}/>
+        <RightArrow />
+        <LeftArrow />
       </div>}
     </div>
   )
