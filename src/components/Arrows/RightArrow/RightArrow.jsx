@@ -1,9 +1,13 @@
 import './RightArrow.css'
 
-const RightArrow = () => {
-    return (
-        <button className='RightArrow'>{"->"}</button>
-    )
+const RightArrow = (props) => {
+  const switchRight = () => {
+    props.handleSwitchRight();
+  }
+
+  return (
+    <button className='RightArrow' onClick={switchRight}>{"->"}</button>
+  )
 }
 
 export default RightArrow;

@@ -1,9 +1,13 @@
 import './LeftArrow.css'
 
-const LeftArrow = () => {
-    return (
-        <button className='LeftArrow'>{"<-"}</button>
-    )
+const LeftArrow = (props) => {
+  const switchLeft = () => {
+    props.handleSwitchLeft();
+  }
+
+  return (
+    <button className='LeftArrow' onClick={switchLeft}>{"<-"}</button>
+  )
 }
 
 export default LeftArrow;
