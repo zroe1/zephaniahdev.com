@@ -10,7 +10,7 @@
 }
 
 .menu-item {
-  background-color: white;
+  /* background-color: white; */
   opacity: 0.0;
   z-index: 10;
   width: 30%;

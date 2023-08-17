@@ -4,10 +4,10 @@ import './ClickHereButton.css'
 
 const CenterText = (props) => {
   const [rotation, setRotation] = useState(0);
-  console.log("I am here");
+//   console.log("I am here");
 
   const changeRotation = () => {
-    console.log("I am here!");
+    // console.log("I am here!");
     setRotation(0.3);
     props.handleRotationChange(0.3);
   }

@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import './ColorSelector.css'
 
 const ColorSelectors = (props) => {
@@ -20,6 +20,13 @@ const ColorSelectors = (props) => {
     setTextColor(event.target.value)
     props.handleTextChange(event.target.value)
   }
+
+  useEffect (() => {
+    // console.log("Color selector: useEffect worked!");
+    setTextColor(props.color);
+    // console.log(props.color)
+  }, [props.color])
+
 
   return (
     <div className='settings'>

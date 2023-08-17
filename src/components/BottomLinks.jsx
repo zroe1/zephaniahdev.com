@@ -18,7 +18,7 @@ const BottomLinks = () => {
         <img className='logo logo3 bottom-link' src={github} alt="leetcode logo" />
       </a>
       <Button className='bottom-link' link="https://github.com/zroe1/zephaniahdev.com" buttonText='README'/>
-      <Button className='bottom-link' link="https://zephyroe.github.io" buttonText='Old Site'/>
+      {/* <Button className='bottom-link' link="https://zephyroe.github.io" buttonText='Old Site'/> */}
     </div>
   )
 }
