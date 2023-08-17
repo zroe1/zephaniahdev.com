@@ -1,6 +1,5 @@
 .returnHome {
     position:absolute;
-    /* top: 100px; */
     top: calc(50% + 150px);
     left: calc(50% - 70px);
     z-index: 5;
@@ -26,22 +25,8 @@
 
 @media only screen and (max-width: 875px) {
 
-    /* .menu-container {
-      top: calc(50% - 200px);
-      height: 400px;
-      flex-direction: column;
-    } */
-
     .returnHome {
-        /* position:absolute; */
-        /* top: 100px; */
         top: calc(50% + 200px);
     }
 
-/*   
-    .menu-item {
-      width: 100%;
-      height: 115px;
-    } */
-  
   } 

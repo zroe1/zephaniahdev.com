@@ -17,7 +17,6 @@
 }
 
 .portfolio-item:hover {
-  /* border-radius: 20px; */
   padding: 24px;
 }
 
@@ -45,7 +44,6 @@
   }
 
   .portfolio-item:hover {
-    /* border-radius: 20px; */
     padding: 10px;
   }
 

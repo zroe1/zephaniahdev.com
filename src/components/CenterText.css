@@ -38,10 +38,6 @@ p {
 }
 
 @media only screen and (max-width: 600px) {
-/* 
-    .interests {
-        display: none;
-    } */
     
     p {
       font-size: 10px;
