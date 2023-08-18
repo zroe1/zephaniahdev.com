@@ -71,7 +71,7 @@ const Menu = (props) => {
                         discription={"Using python I created a TUI for the popular game 2048 and wrote an algorithm that beats the game ~30% of the time."}
                         link={"https://github.com/zroe1/tinyfilter"} itemColor={props.menuBackground} textColor={props.textColor}/>
         <PortfolioItem animationNum="animationSecond" itemName={"Letter predictor"}
-                        status={"Completed for release on 6/13/2023"}
+                        status={"Released 6/13/2023"}
                         discription={"Using a linear regression model and publicly available data, my letter predictor predicts the final letter in five-letter words."}
                         link={"https://roestories.com/"} itemColor={props.menuBackground} textColor={props.textColor}/>
         <PortfolioItem animationNum="animationThird" itemName={"zephysballoons.com"}

@@ -31,7 +31,7 @@ const ColorSelectors = (props) => {
   return (
     <div className='settings'>
       <p className='instruction-text' style={{color: props.color}}>Press down and drag to move through space.</p>
-      <p className='settings-string' style={{color: props.color}}>Settings:</p>
+      <p className='settings-string' style={{color: "white"}}>Settings:</p>
       <div className='inputs'>
         <input type="color" id="Background" name="Background" value={backgroundColor} onChange={changeBackground} />
         <label htmlFor="Background">Background</label>
