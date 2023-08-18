@@ -15,8 +15,8 @@ const PortfolioItem = (props) => {
         <a style={itemPropStyles} className={`portfolio-item ${props.animationNum}`} href={props.link} target="_blank">
             <h2 className="menu-title">{props.itemName}</h2>
             <div style={dividerColor} className="portfolio-divider"></div>
-            <p><span className='portfolio-item-bold'>Status:</span> {props.status}</p>
-            <p><span className='portfolio-item-bold'>Discription: </span> 
+            <p className="portfolioDiscription"><span className='portfolio-item-bold'>Status:</span> {props.status}</p>
+            <p className="portfolioDiscription"><span className='portfolio-item-bold'>Discription: </span> 
                 {props.discription}
             </p>
         </a>

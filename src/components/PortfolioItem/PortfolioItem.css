@@ -22,7 +22,8 @@
 
 .menu-title {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 19px;
+  word-wrap: break-word;
 }
 
 .portfolio-divider {
@@ -33,6 +34,22 @@
 
 .portfolio-item-bold {
   font-weight: bold;
+}
+
+.portfolioDiscription {
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 1300px) {
+  .menu-title {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .portfolioDiscription {
+    font-size: 11px;
+  }
 }
 
 @media only screen and (max-width: 875px) {
