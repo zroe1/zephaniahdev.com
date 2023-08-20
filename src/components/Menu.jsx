@@ -69,29 +69,29 @@ const Menu = (props) => {
         <PortfolioItem  animationNum="animationFirst" itemName={"Recreating 2048"} 
                         status={"Completed 6/12/2023"}
                         discription={"Using python I created a TUI for the popular game 2048 and wrote an algorithm that beats the game ~30% of the time."}
-                        link={"https://github.com/zroe1/tinyfilter"} itemColor={props.menuBackground} textColor={props.textColor}/>
+                        link={"https://github.com/zroe1/2048-python"} itemColor={props.menuBackground} textColor={props.textColor}/>
         <PortfolioItem animationNum="animationSecond" itemName={"Letter predictor"}
                         status={"Released 6/13/2023"}
                         discription={"Using a linear regression model and publicly available data, my letter predictor predicts the final letter in five-letter words."}
-                        link={"https://roestories.com/"} itemColor={props.menuBackground} textColor={props.textColor}/>
+                        link={"https://github.com/zroe1/letter-predictor"} itemColor={props.menuBackground} textColor={props.textColor}/>
         <PortfolioItem animationNum="animationThird" itemName={"zephysballoons.com"}
                         status={"Completed 7/18/23"}
                         discription={"zephysballoons.com is a very simple personal website for my balloon twisting business."}
-                        link={"https://github.com/zroe1/zephysballoons.com"} itemColor={props.menuBackground} textColor={props.textColor}/>
+                        link={"https://zephysballoons.com/"} itemColor={props.menuBackground} textColor={props.textColor}/>
       </div>}
       {isPortfolioSelected && menuPage == 2 && <div className="menu-container">
-        <PortfolioItem  animationNum="animationFirst" itemName={"Productivity Website"} 
-                        status={"Still in progress"}
-                        discription={"tinyfilter converts images into ASCII art using the principles of CNNs (convolutional neural networks)."}
-                        link={"https://github.com/zroe1/tinyfilter"} itemColor={props.menuBackground} textColor={props.textColor}/>
-        <PortfolioItem animationNum="animationSecond" itemName={"Sorting: Rust vs C"}
+      <PortfolioItem animationNum="animationFirst" itemName={"Sorting: Rust vs C"}
                         status={"Still in progress"}
                         discription={"A repository where I write common sorting algorithms in Rust and C and compare their preformance."}
                         link={"https://github.com/zroe1/sorting-rust-c"} itemColor={props.menuBackground} textColor={props.textColor}/>
+        <PortfolioItem  animationNum="animationSecond" itemName={"Productivity Website"} 
+                        status={"Still in progress"}
+                        discription={"tinyfilter converts images into ASCII art using the principles of CNNs (convolutional neural networks)."}
+                        link={"https://github.com/zroe1/productivity-site"} itemColor={props.menuBackground} textColor={props.textColor}/>
         <PortfolioItem animationNum="animationThird" itemName={"Find unused files"}
                         status={"Completed 7/17/2023"}
                         discription={"Python script that recursivly searchs through directories in a website and tracks references to files to determine which can be safely deleted."}
-                        link={"https://github.com/zroe1/find-unused-files-web-dev-6.S191"} itemColor={props.menuBackground} textColor={props.textColor}/>
+                        link={"https://github.com/zroe1/find-unused-files-web-dev"} itemColor={props.menuBackground} textColor={props.textColor}/>
       </div>}
 
       {isPortfolioSelected && <>
