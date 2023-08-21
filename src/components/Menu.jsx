@@ -43,7 +43,7 @@ const Menu = (props) => {
         <div className="menu-item animationFirst" style={menuItemColor} onClick={redeclareIsPortfolioSelected}>
           Portfolio
         </div>
-        <a className="menu-item animationSecond" style={menuItemColor} href="https://docs.google.com/document/d/13v9_JG2TeXQJmx2OnifMUYJrlVzoWrazk1Un0m4iyGE/edit?usp=sharing" target="_blank">
+        <a className="menu-item animationSecond" style={menuItemColor} href="Resume (2023).pdf" target="_blank">
           Resume
         </a>
         <div className="menu-item animationThird" style={menuItemColor}>
