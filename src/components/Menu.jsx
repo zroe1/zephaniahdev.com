@@ -46,10 +46,9 @@ const Menu = (props) => {
         <a className="menu-item animationSecond" style={menuItemColor} href="Resume (2023).pdf" target="_blank">
           Resume
         </a>
-        <div className="menu-item animationThird" style={menuItemColor}>
+        <a className="menu-item animationThird" style={menuItemColor} href="https://zephaniahsdata.com/" target="_blank">
           Productivity
-          <p id="productivity-coming-soon">coming soon...</p>
-        </div>
+        </a>
       </div>}
       {isPortfolioSelected && menuPage == 0 && <div className="menu-container">
         <PortfolioItem  animationNum="animationFirst" itemName={"tinyfilter"} 
