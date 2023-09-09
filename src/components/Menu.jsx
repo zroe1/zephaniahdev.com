@@ -61,7 +61,7 @@ const Menu = (props) => {
                         link={"https://roestories.com/"} itemColor={props.menuBackground} textColor={props.textColor}/>
         <PortfolioItem animationNum="animationThird" itemName={"MIT 6.S191"}
                         status={"Completed August 9, 2023"}
-                        discription={"I took this class (Introduction to Deep Learning) durring the 2023 summer to self-study AI and neural networks."}
+                        discription={"I took this class (Introduction to Deep Learning) during the 2023 summer to self-study AI and neural networks."}
                         link={"https://github.com/zroe1/MIT-6.S191"} itemColor={props.menuBackground} textColor={props.textColor}/>
       </div>}
       {isPortfolioSelected && menuPage == 1 && <div className="menu-container">
@@ -81,15 +81,15 @@ const Menu = (props) => {
       {isPortfolioSelected && menuPage == 2 && <div className="menu-container">
       <PortfolioItem animationNum="animationFirst" itemName={"Sorting: Rust vs C"}
                         status={"Still in progress"}
-                        discription={"A repository where I write common sorting algorithms in Rust and C and compare their preformance."}
+                        discription={"A repository where I write common sorting algorithms in Rust and C and compare their performance."}
                         link={"https://github.com/zroe1/sorting-rust-c"} itemColor={props.menuBackground} textColor={props.textColor}/>
         <PortfolioItem  animationNum="animationSecond" itemName={"Productivity Website"} 
                         status={"Still in progress"}
-                        discription={"tinyfilter converts images into ASCII art using the principles of CNNs (convolutional neural networks)."}
+                        discription={"A website for tracking my productivity over the last four months."}
                         link={"https://github.com/zroe1/productivity-site"} itemColor={props.menuBackground} textColor={props.textColor}/>
         <PortfolioItem animationNum="animationThird" itemName={"Find unused files"}
                         status={"Completed 7/17/2023"}
-                        discription={"Python script that recursivly searchs through directories in a website and tracks references to files to determine which can be safely deleted."}
+                        discription={"A Python script that recursively searchs through directories in a website and tracks references to files to determine which can be safely deleted."}
                         link={"https://github.com/zroe1/find-unused-files-web-dev"} itemColor={props.menuBackground} textColor={props.textColor}/>
       </div>}
 
