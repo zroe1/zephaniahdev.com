@@ -26,6 +26,10 @@
   color: black;
 }
 
+.menu-item:hover {
+  padding: 4px;
+}
+
 .animationFirst {
   animation-name: menuFade;
   animation-duration: 3s;
@@ -72,4 +76,10 @@
   }
 
 } 
+
+@media only screen and (max-width: 875px) {
+  .menu-item:hover {
+    padding: 0px;
+  }
+}
 
