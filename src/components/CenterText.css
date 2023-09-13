@@ -11,9 +11,11 @@
   top: calc(50% - 90px);
   z-index: 1;
 }
+
 .bold {
-    font-weight: bold;
+  font-weight: bold;
 }
+
 button {
   color: black;
   height: 16px;
@@ -23,29 +25,78 @@ p {
   font-size: 13px;
 }
 .quote {
-    font-size: 17px;
-    padding: 4px;
-    margin-bottom: 5px;
-    width: 80%;
-    font-weight: bold;
-    text-align: center;
+  font-size: 17px;
+  padding: 4px;
+  margin-bottom: 5px;
+  width: 80%;
+  font-weight: bold;
+  text-align: center;
 }
 
 .quote-credit {
-    font-size: 11px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+  font-size: 11px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 @media only screen and (max-width: 600px) {
     
-    p {
-      font-size: 10px;
-    }
+  p {
+    font-size: 10px;
+  }
 
-    .text-container {
-      height: 160px;
-      top: calc(50% - 80px);
-    }
+  .text-container {
+    height: 160px;
+    top: calc(50% - 80px);
+  }
 
 } 
+
+@media only screen and (max-width: 500px) {
+    
+  p {
+    font-size: 10px;
+  }
+
+  /* .text-container {
+    height: 160px;
+    top: calc(50% - 80px);
+  } */
+
+  .bold {
+    font-weight: bold;
+    font-size: 19px;
+  }
+
+  .quote {
+    font-size: 14px;
+  }
+
+  .text-container {
+    width: 260px;
+    height: 140px;
+    left: calc(50% - 130px);
+    top: calc(50% - 70px);
+  }
+
+} 
+
+/* @media only screen and (max-height: 700px) {
+
+  .bold {
+    font-weight: bold;
+    font-size: 19px;
+  }
+
+  .quote {
+    font-size: 14px;
+  }
+
+  .text-container {
+    width: 260px;
+    height: 140px;
+    left: calc(50% - 130px);
+    top: calc(50% - 70px);
+  }
+
+}  */
