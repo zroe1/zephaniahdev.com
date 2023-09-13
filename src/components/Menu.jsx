@@ -13,31 +13,11 @@ const Menu = (props) => {
   }
 
   const switchLeft = () => {
-    // console.log("switch left!");
-    // if (menuPage == 1) {
-    //     setMenuPage(0)
-    // }
-    // if (menuPage == 2) {
-    //   setMenuPage(1)
-    // }
-    // if (menuPage == 3) {
-    //   setMenuPage(2)
-    // }
-
     setMenuPage(menuPage - 1);
   }
 
   const switchRight = () => {
-    console.log("switch right!");
-    if (menuPage == 0) {
-        setMenuPage(1)
-    }
-    if (menuPage == 1) {
-      setMenuPage(2)
-    }
-    if (menuPage == 2) {
-      setMenuPage(3)
-    }
+    setMenuPage(menuPage + 1);
   }
 
   const menuItemColor = {
@@ -116,4 +96,4 @@ const Menu = (props) => {
 
 }
   
-  export default Menu
+export default Menu

@@ -22,9 +22,7 @@ const ColorSelectors = (props) => {
   }
 
   useEffect (() => {
-    // console.log("Color selector: useEffect worked!");
     setTextColor(props.color);
-    // console.log(props.color)
   }, [props.color])
 
 

@@ -58,11 +58,6 @@ p {
     font-size: 10px;
   }
 
-  /* .text-container {
-    height: 160px;
-    top: calc(50% - 80px);
-  } */
-
   .bold {
     font-weight: bold;
     font-size: 19px;
@@ -79,24 +74,4 @@ p {
     top: calc(50% - 70px);
   }
 
-} 
-
-/* @media only screen and (max-height: 700px) {
-
-  .bold {
-    font-weight: bold;
-    font-size: 19px;
-  }
-
-  .quote {
-    font-size: 14px;
-  }
-
-  .text-container {
-    width: 260px;
-    height: 140px;
-    left: calc(50% - 130px);
-    top: calc(50% - 70px);
-  }
-
-}  */
+}
