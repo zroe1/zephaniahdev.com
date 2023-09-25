@@ -34,7 +34,7 @@ const Menu = (props) => {
         <a className="menu-item animationSecond" style={menuItemColor} href="https://zephaniahsdata.com/" target="_blank">
           Productivity
         </a>
-        <a className="menu-item animationThird" style={menuItemColor} href="Resume (2023).pdf" target="_blank">
+        <a className="menu-item animationThird" style={menuItemColor} href="Resume (September 2023) .pdf" target="_blank">
           Resume
         </a>
       </div>}
