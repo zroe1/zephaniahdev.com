@@ -25,7 +25,7 @@ p {
   font-size: 13px;
 }
 .quote {
-  font-size: 17px;
+  font-size: 15px;
   padding: 4px;
   margin-bottom: 5px;
   width: 80%;
@@ -60,11 +60,12 @@ p {
 
   .bold {
     font-weight: bold;
-    font-size: 19px;
+    font-size: 18px;
   }
 
   .quote {
-    font-size: 14px;
+    font-size: 12px;
+    width: 75%;
   }
 
   .text-container {
