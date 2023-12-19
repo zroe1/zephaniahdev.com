@@ -8,4 +8,12 @@
   border-radius: 15px;
   border: none;
   color: black;
+  animation: blink 3s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { background-color: white; }
+  60% { background-color: white; }
+  80% { background-color: rgb(249, 249, 90); }
+  99% { background-color: white; }
 }
