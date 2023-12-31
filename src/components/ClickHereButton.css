@@ -8,7 +8,7 @@
   border-radius: 15px;
   border: none;
   color: black;
-  animation: blink 3s infinite;
+  animation: blink 2s infinite;
 }
 
 @keyframes blink {

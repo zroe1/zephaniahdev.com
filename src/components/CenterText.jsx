@@ -14,7 +14,7 @@ const CenterText = (props) => {
     <div className='text-container' style={{color: props.color}}>
       <h1 className='bold'>Zephaniah Roe</h1>
       <p className='quote'>
-        "The hottest new programming language is English"
+        "The hottest new programming language is English."
         {/* "The hottest new programming  */}
         <div className='quote-credit'>-Andrej Karpathy, 2023</div>
       </p>

@@ -43,10 +43,10 @@ const Menu = (props) => {
                         status={"Version 1.0.1 (stable release 8/7/2023)"}
                         discription={"tinyfilter converts images into ASCII art using the principles of CNNs (convolutional neural networks)."}
                         link={"https://github.com/zroe1/tinyfilter"} itemColor={props.menuBackground} textColor={props.textColor}/>
-        <PortfolioItem animationNum="animationSecond" itemName={"roestories"}
-                        status={"Completed for release on 7/19/2023"}
-                        discription={"A portfolio website for my dad, featuring all his work from the over 30 years he spent in journalism."}
-                        link={"https://roestories.com/"} itemColor={props.menuBackground} textColor={props.textColor}/>
+        <PortfolioItem  animationNum="animationSecond" itemName={"Toy Models of Superposition Replication"} 
+                        status={"Completed 12/30/2023"}
+                        discription={"A replication of one of the most groundbreaking papers in ML research."}
+                        link={"https://github.com/zroe1/toy-models-of-superposition"} itemColor={props.menuBackground} textColor={props.textColor}/>
         <PortfolioItem animationNum="animationThird" itemName={"Neural network from scratch"}
                         status={"Completed 9/11/2023"}
                         discription={"Implementation of a fully-functional neural network using only stdio.h and stdlib.h in C."}
@@ -61,10 +61,10 @@ const Menu = (props) => {
                         status={"Completed 6/12/2023"}
                         discription={"Using python I created a TUI for the popular game 2048 and wrote an algorithm that beats the game ~30% of the time."}
                         link={"https://github.com/zroe1/2048-python"} itemColor={props.menuBackground} textColor={props.textColor}/>
-        <PortfolioItem animationNum="animationThird" itemName={"zephysballoons.com"}
-                        status={"Completed 7/18/23"}
-                        discription={"zephysballoons.com is a very simple personal website for my balloon twisting business."}
-                        link={"https://zephysballoons.com/"} itemColor={props.menuBackground} textColor={props.textColor}/>
+        <PortfolioItem animationNum="animationThird" itemName={"roestories"}
+                        status={"Completed for release on 7/19/2023"}
+                        discription={"A portfolio website for my dad, featuring all his work from the over 30 years he spent in journalism."}
+                        link={"https://roestories.com/"} itemColor={props.menuBackground} textColor={props.textColor}/>
       </div>}
       {isPortfolioSelected && menuPage == 2 && <div className="menu-container">
       <PortfolioItem animationNum="animationFirst" itemName={"Sorting: Rust vs C"}
@@ -75,16 +75,16 @@ const Menu = (props) => {
                         status={"Still in progress"}
                         discription={"A website for tracking my productivity over the last four months."}
                         link={"https://zephaniahsdata.com/"} itemColor={props.menuBackground} textColor={props.textColor}/>
-        <PortfolioItem animationNum="animationThird" itemName={"Find unused files"}
+        <PortfolioItem animationNum="animationThird" itemName={"zephysballoons.com"}
+                        status={"Completed 7/18/23"}
+                        discription={"zephysballoons.com is a very simple personal website for my balloon twisting business."}
+                        link={"https://zephysballoons.com/"} itemColor={props.menuBackground} textColor={props.textColor}/>
+      </div>}
+      {isPortfolioSelected && menuPage == 3 && <div className="menu-container">
+      <PortfolioItem animationNum="animationFirst" itemName={"Find unused files"}
                         status={"Completed 7/17/2023"}
                         discription={"A Python script that recursively searchs through directories in a website and tracks references to files to determine which can be safely deleted."}
                         link={"https://github.com/zroe1/find-unused-files-web-dev"} itemColor={props.menuBackground} textColor={props.textColor}/>
-      </div>}
-      {isPortfolioSelected && menuPage == 3 && <div className="menu-container">
-        <PortfolioItem animationNum="animationSecond" itemName={"Letter predictor"}
-                          status={"Released 6/13/2023"}
-                          discription={"Using a linear regression model and publicly available data, my letter predictor predicts the final letter in five-letter words."}
-                          link={"https://github.com/zroe1/letter-predictor"} itemColor={props.menuBackground} textColor={props.textColor}/>
       </div>}
 
       {isPortfolioSelected && <>
