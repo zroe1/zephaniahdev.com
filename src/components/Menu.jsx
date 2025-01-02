@@ -11,7 +11,7 @@ const PORTFOLIO_ITEMS = [
     status: "In progress",
     description:
       "Replication of section 4.1 of 'Gradient Routing: Masking Gradients to Localize Computation in Neural Networks' by Cloud et al.",
-    link: "https://github.com/zroe1/alt-protein-computational",
+    link: "https://github.com/zroe1/gradient-routing",
   },
   {
     itemName: "Protein Classification",
@@ -28,7 +28,7 @@ const PORTFOLIO_ITEMS = [
     link: "https://uchicagoaisafety.com/",
   },
   {
-    itemName: "chicagoalignment.com",
+    itemName: "Conference Website",
     status: "Last update 12/17/2024",
     description: "Website I made for an upcoming AI alignment conference in Chicago.",
     link: "https://chicagoalignment.com/",
@@ -45,6 +45,12 @@ const PORTFOLIO_ITEMS = [
     description:
       "Implementation of a fully-functional neural network using only stdio.h and stdlib.h in C.",
     link: "https://github.com/zroe1/neural-network-from-scratch",
+  },
+  {
+    itemName: "Productivity Website",
+    status: "Still in progress",
+    description: "A website for tracking my productivity over the last four months.",
+    link: "https://zephaniahsdata.com/",
   },
   {
     itemName: "tinyfilter",
@@ -80,12 +86,6 @@ const PORTFOLIO_ITEMS = [
     description:
       "A repository where I write common sorting algorithms in Rust and C and compare their performance.",
     link: "https://github.com/zroe1/sorting-rust-c",
-  },
-  {
-    itemName: "Productivity Website",
-    status: "Still in progress",
-    description: "A website for tracking my productivity over the last four months.",
-    link: "https://zephaniahsdata.com/",
   },
   {
     itemName: "zephysballoons.com",
