@@ -19,7 +19,7 @@
   width: 50%;
   /* background: red; */
   margin: 0 auto;
-  padding: 56px 20px 24px 20px;
+  padding: 56px 20px 12px 20px; /* Reduced bottom padding from 24px to 12px */
 }
 
 .home-title {
@@ -284,7 +284,8 @@ h2 .neon-letter:nth-child(8):hover { color: #ff0080; }
 
 .footnote-marker a {
   text-decoration: none;
-  color: inherit;
+  color: #0fc5e6;
+  font-weight: bold;
 }
 
 .sidenote {

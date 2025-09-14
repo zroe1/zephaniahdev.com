@@ -98,8 +98,22 @@ export default function Home({ onViewLegacy }) {
               <Footnote content="I also go by Zephy." /> Roe, a UChicago senior studying Computer
               Science. I work at the{" "}
               <a className="text-blurb-link" href="https://xrisk.uchicago.edu/">
-                University of Chicago XLab where I study AI Security and Safety.
+                University of Chicago XLab
               </a>{" "}
+              where I study AI Security and Safety.
+            </p>
+            <p className="text-blurb">
+              Previously, I've worked at{" "}
+              <a className="text-blurb-link" href="https://justicetext.com/">
+                JusticeText
+              </a>
+              , a company which uses AI to analyze evidence for public defenders to encourage
+              accounability in policing. I also developed an AI powered pipeline for the{" "}
+              <a className="text-blurb-link" href="https://harris.uchicago.edu/">
+                UChicago Harris School
+              </a>{" "}
+              to analyze scraped Afghanistan government documents for the purpose of tracking
+              Taliban hiring paterns in government.
             </p>
             <p className="text-blurb">
               I have lived in the Chicago area my entire life but only in neighborhoods that end

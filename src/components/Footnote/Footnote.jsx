@@ -20,7 +20,7 @@ export default function Footnote({ content }) {
   return (
     <>
       <sup id={`fnref${id}`} className="footnote-marker">
-        <a href={`#fn${id}`}>[{id}]</a>
+        <a href={`#fn${id}`}>{id}</a>
       </sup>
       <div className="sidenote">
         <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: "16px" }}>
