@@ -275,4 +275,55 @@ h2 .neon-letter:nth-child(8):hover { color: #ff0080; }
   .home-title { font-size: 40px; }
 }
 
+/* Footnote styles */
+.footnote-marker {
+  font-size: 0.7em;
+  vertical-align: super;
+  line-height: 0;
+}
+
+.footnote-marker a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.sidenote {
+  /* font-family: "Libre Baskerville", Georgia, serif; */
+  display: none; /* hidden by default */
+}
+
+@media (min-width: 1200px) {
+  .sidenote {
+    display: block;
+    float: right;
+    clear: right;
+    width: 25%;
+    margin-right: -35%;
+    margin-left: 2em;
+    margin-top: 0;
+    font-size: 0.85em;
+    line-height: 1.4;
+    padding: 0.5em;
+    border-left: 2px solid #ddd;
+    font-family: "Libre Baskerville", Georgia, serif; /* Match site font */
+    color: #383838; /* Match tagline color */
+  }
+}
+
+@media (max-width: 1199px) {
+  .footnotes-section {
+    margin-top: 2em;
+    font-size: 0.9em;
+  }
+
+  .footnotes-section ol {
+    list-style-type: decimal;
+    padding-left: 1em;
+  }
+
+  .footnotes-section li {
+    margin-bottom: 0.5em;
+  }
+}
+
 

@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "./Home.css";
+import Footnote from "../Footnote/Footnote";
+import { FootnoteProvider } from "../Footnote/FootnoteProvider";
+import Footnotes from "../Footnote/Footnotes";
 
 const PROJECTS = [
   {
@@ -66,107 +69,112 @@ export default function Home({ onViewLegacy }) {
   const canExpand = extraProjects.length > 0 && !showAllProjects;
 
   return (
-    <div className="home-root">
-      <header className="home-hero">
-        <h1 className="home-title">{renderNameWithNeonLetters("Zephaniah Roe")}</h1>
-        <p className="home-tagline">
-          Engineer and researcher focused on machine learning, alignment, and simple, reliable
-          software.
-        </p>
-        <nav className="home-nav">
-          <a href="#projects">Projects</a>
-          <a href="#writing">Writing</a>
-          <a href="/RESUME_2024.pdf" target="_blank" rel="noreferrer">
-            Resume
-          </a>
-          <a id="linklike" onClick={onViewLegacy}>
-            View 2024 version of this site
-          </a>
-        </nav>
-      </header>
-
-      <main className="home-content">
-        <section id="about" className="home-section">
-          <h2>{renderNameWithNeonLetters("About Me")}</h2>
-          <div className="neon-underline"></div>
-          <p className="text-blurb">
-            I'm Zephaniah Roe, a UChicago senior studying Computer Science. I work at the{" "}
-            <a className="text-blurb-link" href="https://xrisk.uchicago.edu/">
-              University of Chicago XLab where I study AI Security and Safety.
-            </a>{" "}
+    <FootnoteProvider>
+      <div className="home-root">
+        <header className="home-hero">
+          <h1 className="home-title">{renderNameWithNeonLetters("Zephaniah Roe")}</h1>
+          <p className="home-tagline">
+            Engineer and researcher focused on machine learning, alignment, and simple, reliable
+            software.
           </p>
-          <p className="text-blurb">
-            I have lived in the Chicago area my entire life but only in neighborhoods that end with
-            "Park": Lincoln Park, Oak Park and Hyde Park. I'm currenty looking for jobs and am
-            willing to relocate but to preserve my strict geographic brand consistency, I'll only
-            consider areas also ending with "Park."
-          </p>
-        </section>
+          <nav className="home-nav">
+            <a href="#projects">Projects</a>
+            <a href="#writing">Writing</a>
+            <a href="/RESUME_2024.pdf" target="_blank" rel="noreferrer">
+              Resume
+            </a>
+            <a id="linklike" onClick={onViewLegacy}>
+              View 2024 version of this site
+            </a>
+          </nav>
+        </header>
 
-        <section id="projects" className="home-section">
-          <h2>{renderNameWithNeonLetters("Projects")}</h2>
-          <div className="neon-underline"></div>
-          <ul className="card-grid">
-            {baseProjects.map((p) => (
-              <li key={p.title} className="card">
-                <a href={p.href} target="_blank" rel="noreferrer" className="card-link">
-                  <div className="card-title">{p.title}</div>
-                  <div className="card-blurb">{p.blurb}</div>
-                </a>
-              </li>
-            ))}
-          </ul>
-          {extraProjects.length > 0 && (
-            <div className={`expandable ${showAllProjects ? "open" : ""}`}>
-              <ul className="card-grid">
-                {extraProjects.map((p) => (
-                  <li key={p.title} className="card">
-                    <a href={p.href} target="_blank" rel="noreferrer" className="card-link">
-                      <div className="card-title">{p.title}</div>
-                      <div className="card-blurb">{p.blurb}</div>
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-          {(canExpand || showAllProjects) && (
-            <div className="projects-actions">
-              <button className="view-more" onClick={() => setShowAllProjects((v) => !v)}>
-                {showAllProjects ? "View less" : "View more"}
-              </button>
-            </div>
-          )}
-        </section>
+        <main className="home-content">
+          <section id="about" className="home-section">
+            <h2>{renderNameWithNeonLetters("About Me")}</h2>
+            <div className="neon-underline"></div>
+            <p className="text-blurb">
+              I'm Zephaniah
+              <Footnote content="I also go by Zephy." /> Roe, a UChicago senior studying Computer
+              Science. I work at the{" "}
+              <a className="text-blurb-link" href="https://xrisk.uchicago.edu/">
+                University of Chicago XLab where I study AI Security and Safety.
+              </a>{" "}
+            </p>
+            <p className="text-blurb">
+              I have lived in the Chicago area my entire life but only in neighborhoods that end
+              with "Park": Lincoln Park, Oak Park and Hyde Park. I'm currenty looking for jobs and
+              am willing to relocate, even if that means sacrificing my strict geographic brand
+              consistency.
+            </p>
+          </section>
 
-        <section id="writing" className="home-section">
-          <h2>{renderNameWithNeonLetters("Writing")}</h2>
-          <div className="neon-underline"></div>
-          <ul className="link-list">
-            {WRITING.map((w) => (
-              <li key={w.title}>
-                <a href={w.href} target="_blank" rel="noreferrer">
-                  {w.title}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </section>
-      </main>
+          <section id="projects" className="home-section">
+            <h2>{renderNameWithNeonLetters("Projects")}</h2>
+            <div className="neon-underline"></div>
+            <ul className="card-grid">
+              {baseProjects.map((p) => (
+                <li key={p.title} className="card">
+                  <a href={p.href} target="_blank" rel="noreferrer" className="card-link">
+                    <div className="card-title">{p.title}</div>
+                    <div className="card-blurb">{p.blurb}</div>
+                  </a>
+                </li>
+              ))}
+            </ul>
+            {extraProjects.length > 0 && (
+              <div className={`expandable ${showAllProjects ? "open" : ""}`}>
+                <ul className="card-grid">
+                  {extraProjects.map((p) => (
+                    <li key={p.title} className="card">
+                      <a href={p.href} target="_blank" rel="noreferrer" className="card-link">
+                        <div className="card-title">{p.title}</div>
+                        <div className="card-blurb">{p.blurb}</div>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {(canExpand || showAllProjects) && (
+              <div className="projects-actions">
+                <button className="view-more" onClick={() => setShowAllProjects((v) => !v)}>
+                  {showAllProjects ? "View less" : "View more"}
+                </button>
+              </div>
+            )}
+          </section>
 
-      <footer className="home-footer">
-        <a href="https://github.com/zroe1" target="_blank" rel="noreferrer">
-          GitHub
-        </a>
-        <span>·</span>
-        <a href="https://www.linkedin.com/in/zephaniahroe/" target="_blank" rel="noreferrer">
-          LinkedIn
-        </a>
-        <span>·</span>
-        <a href="https://leetcode.com/zroe1/" target="_blank" rel="noreferrer">
-          LeetCode
-        </a>
-      </footer>
-    </div>
+          <section id="writing" className="home-section">
+            <h2>{renderNameWithNeonLetters("Writing")}</h2>
+            <div className="neon-underline"></div>
+            <ul className="link-list">
+              {WRITING.map((w) => (
+                <li key={w.title}>
+                  <a href={w.href} target="_blank" rel="noreferrer">
+                    {w.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+          <Footnotes />
+        </main>
+
+        <footer className="home-footer">
+          <a href="https://github.com/zroe1" target="_blank" rel="noreferrer">
+            GitHub
+          </a>
+          <span>·</span>
+          <a href="https://www.linkedin.com/in/zephaniahroe/" target="_blank" rel="noreferrer">
+            LinkedIn
+          </a>
+          <span>·</span>
+          <a href="https://leetcode.com/zroe1/" target="_blank" rel="noreferrer">
+            LeetCode
+          </a>
+        </footer>
+      </div>
+    </FootnoteProvider>
   );
 }
