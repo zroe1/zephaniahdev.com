@@ -138,6 +138,48 @@
   text-decoration: underline;
 }
 
+.projects-actions {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+}
+
+.view-more {
+  font-family: "Libre Baskerville", Georgia, serif;
+  color: #00d9ff;
+  background: transparent;
+  border: 1px solid #00d9ff;
+  border-radius: 8px;
+  padding: 18px 18px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.view-more:hover {
+  /* border-color: #d62a85; */
+  /* text-decoration: underline; */
+  border-color: #b5ef08;
+  color: #b5ef08;
+}
+
+.expandable {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  padding-top: 0;
+  transition: max-height 400ms ease, opacity 350ms ease, padding-top 400ms ease;
+}
+
+.expandable.open {
+  max-height: 2000px; /* sufficiently large to fit content */
+  opacity: 1;
+  padding-top: 16px; /* match grid gap for visual separation */
+}
+
 .home-footer {
   margin-top: auto;
   padding: 24px 20px;

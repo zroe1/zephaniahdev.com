@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.css";
 
 const PROJECTS = [
@@ -33,6 +33,11 @@ const PROJECTS = [
     blurb: "Convert images to ASCII using ideas from CNNs.",
     href: "https://github.com/zroe1/tinyfilter",
   },
+  {
+    title: "Save UChicago",
+    blurb: "Static site for a student organization I help run.",
+    href: "https://saveuchicago.com/",
+  },
 ];
 
 const WRITING = [
@@ -47,6 +52,11 @@ const WRITING = [
 ];
 
 export default function Home({ onViewLegacy }) {
+  const [showAllProjects, setShowAllProjects] = useState(false);
+  const baseProjects = PROJECTS.slice(0, 6);
+  const extraProjects = PROJECTS.slice(6);
+  const canExpand = extraProjects.length > 0 && !showAllProjects;
+
   return (
     <div className="home-root">
       <header className="home-hero">
@@ -71,7 +81,7 @@ export default function Home({ onViewLegacy }) {
         <section id="projects" className="home-section">
           <h2>Projects</h2>
           <ul className="card-grid">
-            {PROJECTS.map((p) => (
+            {baseProjects.map((p) => (
               <li key={p.title} className="card">
                 <a href={p.href} target="_blank" rel="noreferrer" className="card-link">
                   <div className="card-title">{p.title}</div>
@@ -80,6 +90,27 @@ export default function Home({ onViewLegacy }) {
               </li>
             ))}
           </ul>
+          {extraProjects.length > 0 && (
+            <div className={`expandable ${showAllProjects ? "open" : ""}`}>
+              <ul className="card-grid">
+                {extraProjects.map((p) => (
+                  <li key={p.title} className="card">
+                    <a href={p.href} target="_blank" rel="noreferrer" className="card-link">
+                      <div className="card-title">{p.title}</div>
+                      <div className="card-blurb">{p.blurb}</div>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {(canExpand || showAllProjects) && (
+            <div className="projects-actions">
+              <button className="view-more" onClick={() => setShowAllProjects((v) => !v)}>
+                {showAllProjects ? "View less" : "View more"}
+              </button>
+            </div>
+          )}
         </section>
 
         <section id="writing" className="home-section">
