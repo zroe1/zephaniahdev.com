@@ -31,6 +31,26 @@
   color: #1f1f1f;
 }
 
+.neon-letter {
+  transition: color 0.1s ease;
+  font-family: "Libre Baskerville", Georgia, serif;
+  cursor: pointer;
+}
+
+.neon-letter:nth-child(1):hover { color: #ff0080; }
+.neon-letter:nth-child(2):hover { color: #00d9ff; }
+.neon-letter:nth-child(3):hover { color: #b5ef08; }
+.neon-letter:nth-child(4):hover { color: #ff4400; }
+.neon-letter:nth-child(5):hover { color: #9d00ff; }
+.neon-letter:nth-child(6):hover { color: #ffff00; }
+.neon-letter:nth-child(7):hover { color: #00ff88; }
+.neon-letter:nth-child(8):hover { color: #ff0080; }
+.neon-letter:nth-child(9):hover { color: #00d9ff; }
+.neon-letter:nth-child(10):hover { color: #b5ef08; }
+.neon-letter:nth-child(11):hover { color: #ff4400; }
+.neon-letter:nth-child(12):hover { color: #9d00ff; }
+.neon-letter:nth-child(13):hover { color: #ffff00; }
+
 .home-tagline {
   font-family: "Libre Baskerville", Georgia, serif;
   font-size: 18px;

@@ -51,6 +51,14 @@ const WRITING = [
   },
 ];
 
+const renderNameWithNeonLetters = (name) => {
+  return name.split("").map((char, index) => (
+    <span key={index} className="neon-letter">
+      {char}
+    </span>
+  ));
+};
+
 export default function Home({ onViewLegacy }) {
   const [showAllProjects, setShowAllProjects] = useState(false);
   const baseProjects = PROJECTS.slice(0, 6);
@@ -60,7 +68,7 @@ export default function Home({ onViewLegacy }) {
   return (
     <div className="home-root">
       <header className="home-hero">
-        <h1 className="home-title">Zephaniah Roe</h1>
+        <h1 className="home-title">{renderNameWithNeonLetters("Zephaniah Roe")}</h1>
         <p className="home-tagline">
           Engineer and researcher focused on machine learning, alignment, and simple, reliable
           software.
