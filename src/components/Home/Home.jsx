@@ -87,7 +87,8 @@ export default function Home({ onViewLegacy }) {
 
       <main className="home-content">
         <section id="projects" className="home-section">
-          <h2>Projects</h2>
+          <h2>{renderNameWithNeonLetters("Projects")}</h2>
+          <div className="neon-underline"></div>
           <ul className="card-grid">
             {baseProjects.map((p) => (
               <li key={p.title} className="card">
@@ -122,7 +123,8 @@ export default function Home({ onViewLegacy }) {
         </section>
 
         <section id="writing" className="home-section">
-          <h2>Writing</h2>
+          <h2>{renderNameWithNeonLetters("Writing")}</h2>
+          <div className="neon-underline"></div>
           <ul className="link-list">
             {WRITING.map((w) => (
               <li key={w.title}>
