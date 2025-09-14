@@ -79,13 +79,30 @@ export default function Home({ onViewLegacy }) {
           <a href="/RESUME_2024.pdf" target="_blank" rel="noreferrer">
             Resume
           </a>
-          <button className="linklike" onClick={onViewLegacy}>
-            View legacy site
-          </button>
+          <a id="linklike" onClick={onViewLegacy}>
+            View 2024 version of this site
+          </a>
         </nav>
       </header>
 
       <main className="home-content">
+        <section id="about" className="home-section">
+          <h2>{renderNameWithNeonLetters("About Me")}</h2>
+          <div className="neon-underline"></div>
+          <p className="text-blurb">
+            I'm Zephaniah Roe, a UChicago senior studying Computer Science. I work at the{" "}
+            <a className="text-blurb-link" href="https://xrisk.uchicago.edu/">
+              University of Chicago XLab where I study AI Security and Safety.
+            </a>{" "}
+          </p>
+          <p className="text-blurb">
+            I have lived in the Chicago area my entire life but only in neighborhoods that end with
+            "Park": Lincoln Park, Oak Park and Hyde Park. I'm currenty looking for jobs and am
+            willing to relocate but to preserve my strict geographic brand consistency, I'll only
+            consider areas also ending with "Park."
+          </p>
+        </section>
+
         <section id="projects" className="home-section">
           <h2>{renderNameWithNeonLetters("Projects")}</h2>
           <div className="neon-underline"></div>
