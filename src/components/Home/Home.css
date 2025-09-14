@@ -304,7 +304,6 @@ h2 .neon-letter:nth-child(8):hover { color: #ff0080; }
     font-size: 0.85em;
     line-height: 1.4;
     padding: 0.5em;
-    border-left: 2px solid #ddd;
     font-family: "Libre Baskerville", Georgia, serif; /* Match site font */
     color: #383838; /* Match tagline color */
   }
