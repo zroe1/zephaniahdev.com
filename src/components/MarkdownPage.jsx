@@ -47,6 +47,22 @@ export default function MarkdownPage() {
               .join("");
             return <h1 {...props}>{renderNameWithNeonLetters(titleText)}</h1>;
           },
+          h2: ({ node, ...props }) => {
+            const titleText = node.children
+              .map((child) => {
+                if (child.type === "text") {
+                  return child.value;
+                }
+                return "";
+              })
+              .join("");
+            return (
+              <>
+                <h2 {...props}>{renderNameWithNeonLetters(titleText)}</h2>
+                <div className="neon-underline"></div>
+              </>
+            );
+          },
           img: ({ node, ...props }) => (
             <img {...props} style={{ maxWidth: "100%", height: "auto" }} />
           ),

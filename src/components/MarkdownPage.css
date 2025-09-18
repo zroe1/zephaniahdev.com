@@ -19,13 +19,19 @@
   font-size: 2rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  border-bottom: 1px solid #444;
-  padding-bottom: 0.5rem;
+  /* padding-bottom: 0.5rem; */
 }
 
 .markdown-page p {
   line-height: 1.6;
   margin-bottom: 1rem;
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 1.0rem;
+}
+
+.markdown-page i {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 1.0rem;
 }
 
 .markdown-page a {
