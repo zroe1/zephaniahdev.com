@@ -5,6 +5,8 @@ import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
+import "./MarkdownPage.css";
+import { renderNameWithNeonLetters } from "./Home/Home";
 
 export default function MarkdownPage() {
   const { slug } = useParams();
@@ -25,15 +27,26 @@ export default function MarkdownPage() {
       .finally(() => setIsLoading(false));
   }, [slug]);
 
-  if (isLoading) return <div style={{ padding: 24 }}>Loading…</div>;
-  if (error) return <div style={{ padding: 24 }}>Error: {error}</div>;
+  if (isLoading) return <div className="markdown-page">Loading…</div>;
+  if (error) return <div className="markdown-page">Error: {error}</div>;
 
   return (
-    <div style={{ maxWidth: 800, margin: "0 auto", padding: 24 }}>
+    <div className="markdown-page">
       <ReactMarkdown
         remarkPlugins={[remarkGfm, remarkMath]}
         rehypePlugins={[rehypeRaw, rehypeKatex]}
         components={{
+          h1: ({ node, ...props }) => {
+            const titleText = node.children
+              .map((child) => {
+                if (child.type === "text") {
+                  return child.value;
+                }
+                return "";
+              })
+              .join("");
+            return <h1 {...props}>{renderNameWithNeonLetters(titleText)}</h1>;
+          },
           img: ({ node, ...props }) => (
             <img {...props} style={{ maxWidth: "100%", height: "auto" }} />
           ),

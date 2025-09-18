@@ -37,19 +37,13 @@
   cursor: pointer;
 }
 
-.neon-letter:nth-child(1):hover { color: #ff0080; }
-.neon-letter:nth-child(2):hover { color: #00d9ff; }
-.neon-letter:nth-child(3):hover { color: #b5ef08; }
-.neon-letter:nth-child(4):hover { color: #ff4400; }
-.neon-letter:nth-child(5):hover { color: #9d00ff; }
-.neon-letter:nth-child(6):hover { color: #ffff00; }
-.neon-letter:nth-child(7):hover { color: #00ff88; }
-.neon-letter:nth-child(8):hover { color: #ff0080; }
-.neon-letter:nth-child(9):hover { color: #00d9ff; }
-.neon-letter:nth-child(10):hover { color: #b5ef08; }
-.neon-letter:nth-child(11):hover { color: #ff4400; }
-.neon-letter:nth-child(12):hover { color: #9d00ff; }
-.neon-letter:nth-child(13):hover { color: #ffff00; }
+.neon-letter.neon-color-1:hover { color: #ff0080; }
+.neon-letter.neon-color-2:hover { color: #00d9ff; }
+.neon-letter.neon-color-3:hover { color: #b5ef08; }
+.neon-letter.neon-color-4:hover { color: #ff4400; }
+.neon-letter.neon-color-5:hover { color: #9d00ff; }
+.neon-letter.neon-color-6:hover { color: #ffff00; }
+.neon-letter.neon-color-7:hover { color: #00ff88; }
 
 /* For h2 headings (Projects = 8 letters, Writing = 7 letters) */
 h2 .neon-letter:nth-child(1):hover { color: #ff0080; }

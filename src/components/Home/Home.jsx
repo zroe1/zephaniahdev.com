@@ -79,11 +79,20 @@ const WRITING = [
 ];
 
 export const renderNameWithNeonLetters = (name) => {
-  return name.split("").map((char, index) => (
-    <span key={index} className="neon-letter">
-      {char}
-    </span>
-  ));
+  const numColors = 7;
+  let letterIndex = 0;
+  return name.split("").map((char, index) => {
+    let colorClass = "";
+    if (char.trim() !== "") {
+      colorClass = `neon-color-${(letterIndex % numColors) + 1}`;
+      letterIndex++;
+    }
+    return (
+      <span key={index} className={`neon-letter ${colorClass}`}>
+        {char}
+      </span>
+    );
+  });
 };
 
 export default function Home({ onViewLegacy }) {

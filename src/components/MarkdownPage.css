@@ -1,0 +1,76 @@
+.markdown-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.markdown-page h1 {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-weight: 400;
+  font-size: 75px;
+  line-height: 1.1;
+  margin: 0 0 1rem 0;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.markdown-page h2 {
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #444;
+  padding-bottom: 0.5rem;
+}
+
+.markdown-page p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.markdown-page a {
+  color: #bb86fc;
+  text-decoration: none;
+}
+
+.markdown-page a:hover {
+  text-decoration: underline;
+}
+
+.markdown-page code {
+  background-color: #333;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: monospace;
+}
+
+.markdown-page pre {
+  background-color: #333;
+  padding: 1em;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.markdown-page pre code {
+  padding: 0;
+  background-color: transparent;
+}
+
+.markdown-page blockquote {
+  border-left: 4px solid #555;
+  padding-left: 1em;
+  margin-left: 0;
+  color: #aaa;
+}
+
+.markdown-page img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .markdown-page h1 {
+    font-size: 60px;
+  }
+}
