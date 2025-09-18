@@ -5,6 +5,7 @@ import { FootnoteProvider } from "../Footnote/FootnoteProvider";
 import Footnotes from "../Footnote/Footnotes";
 import subliminalLearning from "../../assets/subliminal_learning.png";
 import tms from "../../assets/tms.jpeg";
+import jailbreak from "../../assets/jailbreak.png";
 
 const PROJECTS = [
   {
@@ -53,6 +54,12 @@ const WRITING = [
     image: subliminalLearning,
   },
   {
+    title: "Intriguing Properties of gpt-oss Jailbreaks",
+    summary: "We explore the properties of gpt-oss jailbreaks.",
+    href: "/writing/jailbreak",
+    image: jailbreak,
+  },
+  {
     title: "Alternative Models of Superposition",
     summary: "We fit dozens of features in 2D space.",
     href: "https://github.com/zroe1",
@@ -64,7 +71,7 @@ const WRITING = [
   // },
 ];
 
-const renderNameWithNeonLetters = (name) => {
+export const renderNameWithNeonLetters = (name) => {
   return name.split("").map((char, index) => (
     <span key={index} className="neon-letter">
       {char}

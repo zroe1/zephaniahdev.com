@@ -1,6 +1,7 @@
 import React from "react";
 import { useFootnotes } from "./FootnoteProvider";
 import "../Home/Home.css"; // Assuming CSS in Home.css
+import { renderNameWithNeonLetters } from "../Home/Home";
 
 export default function Footnotes() {
   const { footnotes } = useFootnotes();
@@ -8,8 +9,9 @@ export default function Footnotes() {
   if (footnotes.length === 0) return null;
 
   return (
-    <section className="footnotes-section">
-      <h3>Footnotes</h3>
+    <section className="home-section">
+      <h2>{renderNameWithNeonLetters("Footnotes")}</h2>
+      <div className="neon-underline"></div>
       <ol>
         {footnotes.map(({ id, content }) => (
           <li key={id} id={`fn${id}`}>

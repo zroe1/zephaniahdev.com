@@ -330,19 +330,12 @@ h2 .neon-letter:nth-child(8):hover { color: #ff0080; }
 
 .home-footer a:hover { text-decoration: underline; }
 
-@media (max-width: 600px) {
-  .home-title { font-size: 40px; }
-}
-
 @media (max-width: 768px) {
-  .home-hero {
-    padding: 2rem;
-  }
 
-  .home-nav {
+  /* .home-nav {
     flex-direction: column;
     gap: 0.5rem;
-  }
+  } */
 
   .home-content {
     padding: 1rem;
@@ -407,6 +400,15 @@ h2 .neon-letter:nth-child(8):hover { color: #ff0080; }
 }
 
 @media (max-width: 1199px) {
+
+  .home-content {
+    width: 70%;
+  }
+
+  .home-hero {
+    width: 70%;
+  }
+
   .footnotes-section {
     margin-top: 2em;
     font-size: 0.9em;
@@ -425,6 +427,14 @@ h2 .neon-letter:nth-child(8):hover { color: #ff0080; }
 @media (max-width: 768px) {
   .home-content {
     width: 90%;
+  }
+
+  .home-hero {
+    width: 90%;
+  }
+
+  .home-title {
+    font-size: 60px;
   }
 }
 
