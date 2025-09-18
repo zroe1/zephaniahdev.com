@@ -45,12 +45,20 @@ const PROJECTS = [
 
 const WRITING = [
   {
+    title: "Short sample (math)",
+    href: "/writing/short-sample",
+  },
+  {
     title: "Notes on replication work",
     href: "https://github.com/zroe1",
   },
   {
     title: "On learning, alignment, and engineering",
     href: "https://www.linkedin.com/in/zephaniahroe/",
+  },
+  {
+    title: "Sample Writing (local)",
+    href: "/writing/sample",
   },
 ];
 
@@ -90,6 +98,20 @@ export default function Home({ onViewLegacy }) {
         </header>
 
         <main className="home-content">
+          <section id="writing" className="home-section">
+            <h2>{renderNameWithNeonLetters("Writing")}</h2>
+            <div className="neon-underline"></div>
+            <ul className="link-list">
+              {WRITING.map((w) => (
+                <li key={w.title}>
+                  <a href={w.href} target="_blank" rel="noreferrer">
+                    {w.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+
           <section id="about" className="home-section">
             <h2>{renderNameWithNeonLetters("About Me")}</h2>
             <div className="neon-underline"></div>
@@ -159,19 +181,6 @@ export default function Home({ onViewLegacy }) {
             )}
           </section>
 
-          <section id="writing" className="home-section">
-            <h2>{renderNameWithNeonLetters("Writing")}</h2>
-            <div className="neon-underline"></div>
-            <ul className="link-list">
-              {WRITING.map((w) => (
-                <li key={w.title}>
-                  <a href={w.href} target="_blank" rel="noreferrer">
-                    {w.title}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </section>
           <Footnotes />
         </main>
 
