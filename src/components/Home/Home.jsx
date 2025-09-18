@@ -6,6 +6,7 @@ import Footnotes from "../Footnote/Footnotes";
 import subliminalLearning from "../../assets/subliminal_learning.png";
 import tms from "../../assets/tms.jpeg";
 import jailbreak from "../../assets/jailbreak.png";
+import lm from "../../assets/lm.png";
 
 const PROJECTS = [
   {
@@ -52,6 +53,12 @@ const WRITING = [
     summary: "I introduce a simple geometric theory for subliminal learning.",
     href: "/writing/sample",
     image: subliminalLearning,
+  },
+  {
+    title: "Thoughts on Hand Crafting Language Models",
+    summary: "I discuss the potential of hand crafting language models.",
+    href: "/writing/handcrafting",
+    image: lm,
   },
   {
     title: "Intriguing Properties of gpt-oss Jailbreaks",
