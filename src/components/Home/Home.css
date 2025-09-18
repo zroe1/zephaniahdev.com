@@ -213,6 +213,65 @@ h2 .neon-letter:nth-child(8):hover { color: #ff0080; }
   text-decoration: underline;
 }
 
+/* Writing Section */
+.writing-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  /* gap: 2rem; */
+  /* background-color: red; */
+}
+
+.writing-item {
+  transition: background-color 0.2s ease-in-out;
+}
+
+.writing-link {
+  display: flex;
+  gap: 1.8rem;
+  text-decoration: none;
+  color: inherit;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease-in-out;
+  /* background-color: red; */
+  height: 120px;
+}
+
+.writing-link:hover {
+  background-color: rgba(146, 146, 146, 0.05);
+}
+
+.writing-thumb {
+  width: 120px;
+  height: 120px;
+  /* object-fit: cover; */
+  border-radius: 4px;
+  /* flex-shrink: 0; */
+}
+
+.writing-meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.writing-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  font-family: "Libre Baskerville", Georgia, serif;
+}
+
+.writing-summary {
+  font-size: 1.1rem;
+  font-family: "Libre Baskerville", Georgia, serif;
+  /* color: #aaa; */
+}
+
+
 .projects-actions {
   margin-top: 14px;
   display: flex;
@@ -275,6 +334,43 @@ h2 .neon-letter:nth-child(8):hover { color: #ff0080; }
   .home-title { font-size: 40px; }
 }
 
+@media (max-width: 768px) {
+  .home-hero {
+    padding: 2rem;
+  }
+
+  .home-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .home-content {
+    padding: 1rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .writing-title {
+    font-size: 1.2rem;
+  }
+
+  .writing-summary {
+    font-size: 1rem;
+  }
+
+  /* .writing-link {
+    flex-direction: column;
+  } */
+
+  /* .writing-thumb {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  } */
+}
+
 /* Footnote styles */
 .footnote-marker {
   font-size: 0.7em;
@@ -323,6 +419,12 @@ h2 .neon-letter:nth-child(8):hover { color: #ff0080; }
 
   .footnotes-section li {
     margin-bottom: 0.5em;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-content {
+    width: 90%;
   }
 }
 

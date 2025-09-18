@@ -3,6 +3,8 @@ import "./Home.css";
 import Footnote from "../Footnote/Footnote";
 import { FootnoteProvider } from "../Footnote/FootnoteProvider";
 import Footnotes from "../Footnote/Footnotes";
+import subliminalLearning from "../../assets/subliminal_learning.png";
+import tms from "../../assets/tms.jpeg";
 
 const PROJECTS = [
   {
@@ -45,21 +47,21 @@ const PROJECTS = [
 
 const WRITING = [
   {
-    title: "Short sample (math)",
-    href: "/writing/short-sample",
-  },
-  {
-    title: "Notes on replication work",
-    href: "https://github.com/zroe1",
-  },
-  {
-    title: "On learning, alignment, and engineering",
-    href: "https://www.linkedin.com/in/zephaniahroe/",
-  },
-  {
-    title: "Sample Writing (local)",
+    title: "Early Theory for Subliminal Learning",
+    summary: "I introduce a simple geometric theory for subliminal learning.",
     href: "/writing/sample",
+    image: subliminalLearning,
   },
+  {
+    title: "Alternative Models of Superposition",
+    summary: "We fit dozens of features in 2D space.",
+    href: "https://github.com/zroe1",
+    image: tms,
+  },
+  // {
+  //   title: "On learning, alignment, and engineering",
+  //   href: "https://www.linkedin.com/in/zephaniahroe/",
+  // },
 ];
 
 const renderNameWithNeonLetters = (name) => {
@@ -98,20 +100,6 @@ export default function Home({ onViewLegacy }) {
         </header>
 
         <main className="home-content">
-          <section id="writing" className="home-section">
-            <h2>{renderNameWithNeonLetters("Writing")}</h2>
-            <div className="neon-underline"></div>
-            <ul className="link-list">
-              {WRITING.map((w) => (
-                <li key={w.title}>
-                  <a href={w.href} target="_blank" rel="noreferrer">
-                    {w.title}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </section>
-
           <section id="about" className="home-section">
             <h2>{renderNameWithNeonLetters("About Me")}</h2>
             <div className="neon-underline"></div>
@@ -143,6 +131,30 @@ export default function Home({ onViewLegacy }) {
               am willing to relocate, even if that means sacrificing my strict geographic brand
               consistency.
             </p>
+          </section>
+
+          <section id="writing" className="home-section">
+            <h2>{renderNameWithNeonLetters("Writing")}</h2>
+            <div className="neon-underline"></div>
+            <ul className="writing-list">
+              {WRITING.map((w) => (
+                <li key={w.title} className="writing-item">
+                  <a
+                    href={w.href}
+                    className="writing-link"
+                    target={w.href.startsWith("http") ? "_blank" : ""}
+                    rel="noreferrer">
+                    {w.image && (
+                      <img className="writing-thumb" src={w.image} alt={w.title} loading="lazy" />
+                    )}
+                    <div className="writing-meta">
+                      <div className="writing-title">{w.title}</div>
+                      {w.summary && <div className="writing-summary">{w.summary}</div>}
+                    </div>
+                  </a>
+                </li>
+              ))}
+            </ul>
           </section>
 
           <section id="projects" className="home-section">
