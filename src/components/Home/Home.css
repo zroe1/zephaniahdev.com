@@ -79,6 +79,7 @@ h2 .neon-letter:nth-child(8):hover { color: #ff0080; }
   background: transparent;
   border: none;
   padding: 0;
+  font-size: 14px;
 }
 
 .text-blurb-link {
@@ -145,7 +146,7 @@ h2 .neon-letter:nth-child(8):hover { color: #ff0080; }
   padding: 0px;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 16px;
 }
 
@@ -154,7 +155,7 @@ h2 .neon-letter:nth-child(8):hover { color: #ff0080; }
   background: #fff;
   border-radius: 10px;
   /* box-shadow: 0 1px 0 rgba(0,0,0,0.03); */
-  padding: 10px;
+  padding: 7px;
   height: 130px;
   transition: border-color 0.2s ease;
 }
@@ -227,7 +228,7 @@ h2 .neon-letter:nth-child(8):hover { color: #ff0080; }
   gap: 1.8rem;
   text-decoration: none;
   color: inherit;
-  padding: 1rem;
+  padding: 0.7rem;
   border-radius: 8px;
   transition: background-color 0.2s ease-in-out;
   /* background-color: red; */
@@ -260,52 +261,9 @@ h2 .neon-letter:nth-child(8):hover { color: #ff0080; }
 }
 
 .writing-summary {
-  font-size: 0.9rem;
+  font-size:14px;
   font-family: "Libre Baskerville", Georgia, serif;
   /* color: #aaa; */
-}
-
-
-.projects-actions {
-  margin-top: 14px;
-  display: flex;
-  justify-content: center;
-}
-
-.view-more {
-  font-family: "Libre Baskerville", Georgia, serif;
-  color: #0fc5e6;
-  background: transparent;
-  border: 1px solid #0fc5e6;
-  border-radius: 8px;
-  padding: 18px 18px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-  font-weight: 800;
-  font-size: 14px;
-}
-
-.view-more:hover {
-  /* border-color: #d62a85; */
-  /* text-decoration: underline; */
-  border-color: #b5ef08;
-  color: #b5ef08;
-}
-
-.expandable {
-  overflow: hidden;
-  max-height: 0;
-  opacity: 0;
-  padding-top: 0;
-  transition: max-height 400ms ease, opacity 350ms ease, padding-top 400ms ease;
-}
-
-.expandable.open {
-  max-height: 2000px; /* sufficiently large to fit content */
-  opacity: 1;
-  padding-top: 16px; /* match grid gap for visual separation */
 }
 
 .home-footer {
@@ -344,7 +302,7 @@ h2 .neon-letter:nth-child(8):hover { color: #ff0080; }
   }
 
   .writing-summary {
-    font-size: 1rem;
+    font-size: 14px;
   }
 
   /* .writing-link {
@@ -359,6 +317,11 @@ h2 .neon-letter:nth-child(8):hover { color: #ff0080; }
 }
 
 /* Footnote styles */
+.footnote-item {
+  font-size: 14px;
+  font-family: "Libre Baskerville", Georgia, serif;
+}
+
 .footnote-marker {
   font-size: 0.7em;
   vertical-align: super;

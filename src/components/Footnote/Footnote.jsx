@@ -23,7 +23,7 @@ export default function Footnote({ content }) {
         <a href={`#fn${id}`}>{id}</a>
       </sup>
       <div className="sidenote">
-        <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: "16px" }}>
+        <p style={{ fontFamily: "Libre Baskerville, Georgia, serif", fontSize: "14px" }}>
           {id}. {content}
         </p>
       </div>

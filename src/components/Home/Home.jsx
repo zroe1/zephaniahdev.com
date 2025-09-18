@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Home.css";
 import Footnote from "../Footnote/Footnote";
 import { FootnoteProvider } from "../Footnote/FootnoteProvider";
@@ -63,13 +63,13 @@ const WRITING = [
   {
     title: "Intriguing Properties of gpt-oss Jailbreaks",
     summary: "We explore the properties of gpt-oss jailbreaks.",
-    href: "/writing/jailbreak",
+    href: "https://xlabaisecurity.com/blog/gpt-oss-jailbreaks/",
     image: jailbreak,
   },
   {
     title: "Alternative Models of Superposition",
     summary: "We fit dozens of features in 2D space.",
-    href: "https://github.com/zroe1",
+    href: "https://www.lesswrong.com/posts/pCJXa3DbEfGjcZAgZ/alternative-models-of-superposition",
     image: tms,
   },
   // {
@@ -96,11 +96,6 @@ export const renderNameWithNeonLetters = (name) => {
 };
 
 export default function Home({ onViewLegacy }) {
-  const [showAllProjects, setShowAllProjects] = useState(false);
-  const baseProjects = PROJECTS.slice(0, 6);
-  const extraProjects = PROJECTS.slice(6);
-  const canExpand = extraProjects.length > 0 && !showAllProjects;
-
   return (
     <FootnoteProvider>
       <div className="home-root">
@@ -133,7 +128,12 @@ export default function Home({ onViewLegacy }) {
               <a className="text-blurb-link" href="https://xrisk.uchicago.edu/">
                 University of Chicago XLab
               </a>{" "}
-              where I study AI Security and Safety.
+              where I study AI Security and Safety and organize for the UChicago AI risk student
+              group. I also lead the team which created the{" "}
+              <a className="text-blurb-link" href="https://xlabaisecurity.com/">
+                XLab AI Security Guide
+              </a>
+              .
             </p>
             <p className="text-blurb">
               Previously, I've worked at{" "}
@@ -153,6 +153,13 @@ export default function Home({ onViewLegacy }) {
               with "Park": Lincoln Park, Oak Park and Hyde Park. I'm currenty looking for jobs and
               am willing to relocate, even if that means sacrificing my strict geographic brand
               consistency.
+            </p>
+            <p className="text-blurb">
+              I'm very happy to talk about my work and my interests. Feel free to reach out to me at{" "}
+              <a className="text-blurb-link" href="mailto:zroe@uchicago.edu">
+                zroe@uchicago.edu
+              </a>
+              <Footnote content="I'm also zroe1 on Github!" />.
             </p>
           </section>
 
@@ -184,7 +191,7 @@ export default function Home({ onViewLegacy }) {
             <h2>{renderNameWithNeonLetters("Projects")}</h2>
             <div className="neon-underline"></div>
             <ul className="card-grid">
-              {baseProjects.map((p) => (
+              {PROJECTS.map((p) => (
                 <li key={p.title} className="card">
                   <a href={p.href} target="_blank" rel="noreferrer" className="card-link">
                     <div className="card-title">{p.title}</div>
@@ -193,27 +200,6 @@ export default function Home({ onViewLegacy }) {
                 </li>
               ))}
             </ul>
-            {extraProjects.length > 0 && (
-              <div className={`expandable ${showAllProjects ? "open" : ""}`}>
-                <ul className="card-grid">
-                  {extraProjects.map((p) => (
-                    <li key={p.title} className="card">
-                      <a href={p.href} target="_blank" rel="noreferrer" className="card-link">
-                        <div className="card-title">{p.title}</div>
-                        <div className="card-blurb">{p.blurb}</div>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-            {(canExpand || showAllProjects) && (
-              <div className="projects-actions">
-                <button className="view-more" onClick={() => setShowAllProjects((v) => !v)}>
-                  {showAllProjects ? "View less" : "View more"}
-                </button>
-              </div>
-            )}
           </section>
 
           <Footnotes />

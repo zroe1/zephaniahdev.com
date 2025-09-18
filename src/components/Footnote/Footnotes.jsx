@@ -14,7 +14,7 @@ export default function Footnotes() {
       <div className="neon-underline"></div>
       <ol>
         {footnotes.map(({ id, content }) => (
-          <li key={id} id={`fn${id}`}>
+          <li key={id} id={`fn${id}`} className="footnote-item">
             {content}
             <a href={`#fnref${id}`}> ↑</a>
           </li>

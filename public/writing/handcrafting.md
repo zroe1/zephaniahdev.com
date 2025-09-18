@@ -36,7 +36,7 @@ Another important question: why do this at all? Or a more confrontational framin
 
 The value that this kind of work provides is to give potential explanations for all of the small, less important mechanisms at play in neural networks. Returning to Neel's theory:
 
-My interpretation of the research so far is that models have some human understandable high-level structure that drives important actions, and a very long tail of increasingly niche and irrelevant heuristics and biases.
+> My interpretation of the research so far is that models have some human understandable high-level structure that drives important actions, and a very long tail of increasingly niche and irrelevant heuristics and biases.
 
 But shouldn’t we be interested in this long tail? How do we know these effects are truly “irrelevant” unless we document them, and their interactions one by one? The long tail is annoying because it’s hard to spin up some quick results, but potentially by taking the time to understand it, we can construct a better idea of what neural networks are actually doing.
 
@@ -44,4 +44,4 @@ So while I’m sure the language model I am studying has some very salient prope
 
 ## Some Early Signs of Progress
 
-WIP
+work in progress ...
