@@ -1,5 +1,7 @@
 # Thoughts on Hand Crafting Language Models
 
+<p style="text-align: center">By, Zephaniah Roe</p>
+
 <p><i>Credit to Rick Goldstien initial idea for this project. Technical progress was also made under his mentorship.</i></p>
 
 ## The Idea

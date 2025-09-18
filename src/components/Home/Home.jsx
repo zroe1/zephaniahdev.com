@@ -51,7 +51,7 @@ const WRITING = [
   {
     title: "Early Theory for Subliminal Learning",
     summary: "I introduce a simple geometric theory for subliminal learning.",
-    href: "/writing/sample",
+    href: "/writing/subliminal",
     image: subliminalLearning,
   },
   {

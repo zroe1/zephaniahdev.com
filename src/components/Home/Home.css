@@ -16,16 +16,16 @@
 
 .home-hero {
   max-width:1500px;
-  width: 50%;
+  width: 45%;
   /* background: red; */
   margin: 0 auto;
-  padding: 56px 20px 12px 20px; /* Reduced bottom padding from 24px to 12px */
+  padding: 56px 20px 0px 20px; /* Reduced bottom padding from 24px to 12px */
 }
 
 .home-title {
   font-family: "Libre Baskerville", Georgia, serif;
   font-weight: 400;
-  font-size: 75px;
+  font-size: 65px;
   line-height: 1.1;
   margin: 0 0 16px 0;
   color: #1f1f1f;
@@ -57,7 +57,7 @@ h2 .neon-letter:nth-child(8):hover { color: #ff0080; }
 
 .home-tagline {
   font-family: "Libre Baskerville", Georgia, serif;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.6;
   margin: 0 0 20px 0;
   color: #383838;
@@ -65,7 +65,7 @@ h2 .neon-letter:nth-child(8):hover { color: #ff0080; }
 
 .home-nav {
   display: flex;
-  gap: 18px;
+  gap: 14px;
   flex-wrap: wrap;
 }
 
@@ -98,7 +98,7 @@ h2 .neon-letter:nth-child(8):hover { color: #ff0080; }
 
 .text-blurb {
   font-family: "Libre Baskerville", Georgia, serif;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.6;
   margin: 0 0 20px 0;
   color: #383838;
@@ -115,20 +115,20 @@ h2 .neon-letter:nth-child(8):hover { color: #ff0080; }
 
 
 .home-content {
-  width: 50%;
+  width: 45%;
   max-width: 1500px;
   margin: 0 auto;
   padding: 24px 20px 64px 20px;
 }
 
 .home-section {
-  margin-top: 28px;
+  margin-top: 24px;
 }
 
 .home-section h2 {
   font-family: "Libre Baskerville", Georgia, serif;
   font-weight: 700;
-  font-size: 34px;
+  font-size: 30px;
   margin: 0 0 12px 0;
   color: #1f1f1f;
 }
@@ -178,14 +178,14 @@ h2 .neon-letter:nth-child(8):hover { color: #ff0080; }
 .card-title {
   font-family: "Libre Baskerville", Georgia, serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 14px;
   margin-bottom: 6px;
   color: #1f1f1f;
 }
 
 .card-blurb {
   font-family: "Libre Baskerville", Georgia, serif;
-  font-size: 14px;
+  font-size: 12px;
   color: #4a4a4a;
   line-height: 1.5;
 }
@@ -231,7 +231,7 @@ h2 .neon-letter:nth-child(8):hover { color: #ff0080; }
   border-radius: 8px;
   transition: background-color 0.2s ease-in-out;
   /* background-color: red; */
-  height: 120px;
+  height: 90px;
 }
 
 .writing-link:hover {
@@ -239,8 +239,8 @@ h2 .neon-letter:nth-child(8):hover { color: #ff0080; }
 }
 
 .writing-thumb {
-  width: 120px;
-  height: 120px;
+  width: 90px;
+  height: 90px;
   /* object-fit: cover; */
   border-radius: 4px;
   /* flex-shrink: 0; */
@@ -253,14 +253,14 @@ h2 .neon-letter:nth-child(8):hover { color: #ff0080; }
 }
 
 .writing-title {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 0.25rem;
   font-family: "Libre Baskerville", Georgia, serif;
 }
 
 .writing-summary {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-family: "Libre Baskerville", Georgia, serif;
   /* color: #aaa; */
 }
