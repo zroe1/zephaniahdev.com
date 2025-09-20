@@ -77,3 +77,41 @@ We can also get the loss of Llama 3.1 8B by taking the softmax over only the 5 c
 <img src="\src\assets\lm1.png"></img>
 
 In the above plot, we can see that if the linear model is trained over enough epochs, the validation loss converges to Llama 3.1 8B's loss which is roughly human level.
+
+### Looking Directly at Weights
+
+If we can replace certain decisions in the model (e.g., what conjunction to choose) with a linear model, is this progress?
+
+On one hand, linear models could be viewed as inherently interpretible, but the skeptical reader may have concerns. For example, maybe some weights are high because a certain token only appears one time in the training data. So while looking at the weights, it may look like the model values that token highly. In reality, however, the token is so infrequent that it would only be active on $1/100,000$ examples. In other words, the influence of the wieght is not entirely obivous by only looking at the magnitude.
+
+One easy thing we can do to minimize non-essential wieghts being assigned a large magnitude is some agressive regularization. We add an $L_1$ loss to ensure that there is pressure for the optimization to find solutions with fewer non-zero wieghts.
+
+Next, I manually looked for patterns in the training data to find salient trends that I would expect the linear model to come up with. One example is that the conjunction " but" is almost always preceeded by the "," token. When we check the weights for the "," token at the final possition we get:
+
+<img width="80%" align="center" src="/src/assets/but.png"></img>
+
+This makes sense! The presence of the "," token in the final position greatly increases the probability the model will predict " but".
+
+Another example of a salient property of the training data is the word " was" is often followed by " so". For example:
+
+> it out and saw that it was her triangle She was **so**
+
+> end, Dependable won the race The family was **so**
+
+> Inside the box, Tim found a toy gun. He was **so**
+
+When we check the weights for the final token being " was" we can see the so has a large positive weight:
+
+<img width="80%" align="center" src="/src/assets/so.png"></img>
+
+### What does this tell us?
+
+The hope is these experiments show that linear models can produce results that match human performance on narrow subtasks. Perhaps more importantly however, is that it looks like the weights of these linear models match what we would expect for especially salient characteristics of the data.
+
+We would like to build on these results to find which rules that language models learn are linear and how non-linearities further increase performance. Eventually, we would like to handcraft the entire one-layer tiny language model.
+
+### Interactive Demo
+
+To see weights, tokens with similar weights and different groups of 5 tokens we choose in addition to the conjunctions, visit https://tiny-stories.netlify.app/.
+
+For questions, comments, or feedback, you can shoot me an email at zroe@uchicago.edu.
