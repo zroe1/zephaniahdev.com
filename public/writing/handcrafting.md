@@ -74,7 +74,7 @@ From the examples above you can see that the correct conjunction is often ambigu
 
 We can also get the loss of Llama 3.1 8B by taking the softmax over only the 5 conjunction tokens before finding the NLL. In the training plot for the linear model we trained, the Llama 3.1 8B baseline is shown as the horizontal dotted line.
 
-<img src="\src\assets\lm1.png"></img>
+<img src="/images/lm1.png"></img>
 
 In the above plot, we can see that if the linear model is trained over enough epochs, the validation loss converges to Llama 3.1 8B's loss which is roughly human level.
 
@@ -88,7 +88,7 @@ One easy thing we can do to minimize non-essential wieghts being assigned a larg
 
 Next, I manually looked for patterns in the training data to find salient trends that I would expect the linear model to come up with. One example is that the conjunction " but" is almost always preceeded by the "," token. When we check the weights for the "," token at the final possition we get:
 
-<img width="80%" align="center" src="/src/assets/but.png"></img>
+<img width="80%" align="center" src="/images/but.png"></img>
 
 This makes sense! The presence of the "," token in the final position greatly increases the probability the model will predict " but".
 
@@ -102,7 +102,7 @@ Another example of a salient property of the training data is the word " was" is
 
 When we check the weights for the final token being " was" we can see the so has a large positive weight:
 
-<img width="80%" align="center" src="/src/assets/so.png"></img>
+<img width="80%" align="center" src="/images/so.png"></img>
 
 ### What does this tell us?
 
