@@ -35,6 +35,7 @@
   transition: color 0.1s ease;
   font-family: "Libre Baskerville", Georgia, serif;
   cursor: pointer;
+  font-weight: 400;
 }
 
 .neon-letter.neon-color-1:hover { color: #ff0080; }
@@ -139,6 +140,18 @@ h2 .neon-letter:nth-child(8):hover { color: #ff0080; }
   height: 2px;
   background: #b5ef08;
   margin-bottom: 12px;
+}
+
+.neon-underline-pink {
+  width: 30%;
+  height: 2px;
+  background: #00d9ff;
+  margin-bottom: 12px;
+  margin-top: 6px;
+}
+
+ol {
+  font-family: "Libre Baskerville", Georgia, serif;
 }
 
 .card-grid {
