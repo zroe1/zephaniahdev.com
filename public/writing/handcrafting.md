@@ -2,7 +2,7 @@
 
 <p style="text-align: center">By, Zephaniah Roe</p>
 
-<p><i>Credit to Rick Goldstien initial idea for this project. Technical progress was also made under his mentorship.</i></p>
+<p><i>Credit to <a href="https://www.linkedin.com/in/rick-goldstein-1a08403a">Rick Goldstien</a> initial idea for this project. Technical progress was also made under his mentorship.</i></p>
 
 ## The Idea
 
@@ -12,9 +12,9 @@ For the past few weeks, I have been working part time on training a one-layer la
 
 During my time at UChicago, multiple accomplished CS professors have expressed during lectures that trying to interpret neural networks is a dead end. One particularly dogmatic professor claimed that nobody really works on interpreting neural networks anymore.
 
-The latter claim is certainly not true! Not only is there a professor at UChicago that specializes in mechanistic interpretability, there is also an interpretability team at Anthropic, DeepMind, along with a number of other teams scattered across academia and industry who have racked up thousands of citations.
+The latter claim is certainly not true! Not only is there a professor at UChicago that specializes in mechanistic interpretability, there is also an interpretability team at Anthropic and DeepMind, along with a number of other teams scattered across academia and industry who have racked up thousands of citations.
 
-However, even some of the figures leading these efforts tend to be losing ambition. The wide-eyed optimism that characterized earlier writing on mechanistic interpretability is turning into something more “pragmatic.” Neel Nanda, who leads the mechanistic interpretability team at Google Deepmind claims that the complete reverse engineering models as a research agenda is “basically doomed”:
+However, even some of the figures leading these efforts are losing ambition. The wide-eyed optimism that characterized earlier writing on mechanistic interpretability is turning into something more “pragmatic.” Neel Nanda, who leads the mechanistic interpretability team at Google Deepmind claims that the complete reverse engineering models as a research agenda is “basically doomed”:
 
 > I used to be very excited about ambitious reverse engineering, but I currently think that the dream of completely reverse engineering a model down to something human understandable seems basically doomed. My interpretation of the research so far is that models have some human understandable high-level structure that drives important actions, and a very long tail of increasingly niche and irrelevant heuristics and biases.
 
@@ -44,4 +44,36 @@ So while I’m sure the language model I am studying has some very salient prope
 
 ## Some Early Signs of Progress
 
-work in progress ...
+Athough I haven't begun investigating indiviual neurons in the tiny language model I am studying, early results indicate that the rules the model has learned aren't exceeding complex. I benchmark subtasks I a suspect a tiny language model will learn against linear models, a Llama 3.1 8B, and human labeling. I find that for narrow enough subtasks, a linear language model matches the performance of humans and Llama 3.1 8B. This indicates that simple linear rules make be able to explain a wide variety of huristics we find in the long tail of alien properties.
+
+In the following sections I describe the methodology of these early results. More work coming soon!
+
+### How to Tokenize a Tiny Language Model
+
+<i>The following tokenizer method was designed entirely by <a href="https://www.linkedin.com/in/rick-goldstein-1a08403a">Rick Goldstien.</a></i>
+
+We use the Tiny Stories Dataset <a href="https://arxiv.org/abs/2305.07759">(Eldan and Li, 2023)</a> and a tokenizer with 1024 tokens. The model takes in 16 tokens but for each of the 1024 tokens in the vocabulary, we construct a new token for each possible possition. This gives us $1024 \times 16 = 16384$ total tokens. This makes things simipler, because we no longer have to parse how the model learns sequence position information for each token.
+
+### Training Linear Models
+
+For each linear model I train, I choose 5 words of interest. For example, I was interested in how the model may choose between conjunctions or reason about the best way to continue sentences that aren't finished after their first independent clause. For this case, I chose 5 conjunctions: "and", "but", "for", "so", and "or".
+
+Recall that each training example has only 16 tokens of context. This means that examples fed into the linear model sometimes lack context that a larger model may have access to. To illustrate this, I have included a few selected training examples:
+
+> Mom, I found this needle. Can you share it with me **and**
+
+> not have any friends. All the other trees were big and strong, **but**
+
+> ax felt better. He said, "Thank you, Owl, **for**
+
+> ives are not toys. You must be very careful with them, **or**
+
+> hoop and chased it around the yard. Tom had **so**
+
+From the examples above you can see that the correct conjunction is often ambiguous. When benchmarking against 50 random training examples, I got 35/50 examples correct and Rick got 37/50 examples correct. This roughly corresponds to the accuracy of Llama 3.1 8B when we take the argmax of only the tokens corresponding to " and", " but", " for", " so", and " or".
+
+We can also get the loss of Llama 3.1 8B by taking the softmax over only the 5 conjunction tokens before finding the NLL. In the training plot for the linear model we trained, the Llama 3.1 8B baseline is shown as the horizontal dotted line.
+
+<img src="\src\assets\lm1.png"></img>
+
+In the above plot, we can see that if the linear model is trained over enough epochs, the validation loss converges to Llama 3.1 8B's loss which is roughly human level.
