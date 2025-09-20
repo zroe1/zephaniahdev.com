@@ -286,6 +286,7 @@ ol {
   display: flex;
   gap: 10px;
   justify-content: center;
+  font-family: "Libre Baskerville", Georgia, serif;
 }
 
 .home-footer a {

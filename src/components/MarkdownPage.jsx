@@ -15,16 +15,20 @@ export default function MarkdownPage() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setIsLoading(true);
-    setError("");
-    fetch(`/writing/${slug}.md`)
-      .then((res) => {
-        if (!res.ok) throw new Error(`Failed to load markdown: ${res.status}`);
-        return res.text();
-      })
-      .then((text) => setContent(text))
-      .catch((e) => setError(e.message))
-      .finally(() => setIsLoading(false));
+    const fetchContent = async () => {
+      setIsLoading(true);
+      setError("");
+      try {
+        const module = await import(`../writing/${slug}.md?raw`);
+        setContent(module.default);
+      } catch (e) {
+        setError("Failed to load markdown.");
+        console.error(e);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    fetchContent();
   }, [slug]);
 
   if (isLoading) return <div className="markdown-page">Loading…</div>;

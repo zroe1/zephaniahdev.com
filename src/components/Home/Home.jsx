@@ -10,10 +10,9 @@ import lm from "../../assets/lm.png";
 
 const PROJECTS = [
   {
-    title: "Gradient Routing",
-    blurb:
-      "Replication of section 4.1 from Cloud et al. exploring masked gradients to localize computation.",
-    href: "https://github.com/zroe1/gradient-routing",
+    title: "UChicago XLab AI Security Guide",
+    blurb: "A guide to AI security and safety for the UChicago XLab.",
+    href: "https://xlabaisecurity.com/",
   },
   {
     title: "Protein Classification",
@@ -31,6 +30,12 @@ const PROJECTS = [
     href: "https://chicagoalignment.com/",
   },
   {
+    title: "Gradient Routing",
+    blurb:
+      "Gradient routing experiments that isolate neural network capabilities to specific regions.",
+    href: "https://github.com/zroe1/gradient-routing",
+  },
+  {
     title: "UChicago AI Safety",
     blurb: "Static site for a student organization I help run.",
     href: "https://uchicagoaisafety.com/",
@@ -39,11 +44,6 @@ const PROJECTS = [
     title: "tinyfilter",
     blurb: "Convert images to ASCII using ideas from CNNs.",
     href: "https://github.com/zroe1/tinyfilter",
-  },
-  {
-    title: "Save UChicago",
-    blurb: "Static site for a student organization I help run.",
-    href: "https://saveuchicago.com/",
   },
 ];
 
@@ -108,7 +108,7 @@ export default function Home({ onViewLegacy }) {
           <nav className="home-nav">
             <a href="#projects">Projects</a>
             <a href="#writing">Writing</a>
-            <a href="/RESUME_2024.pdf" target="_blank" rel="noreferrer">
+            <a href="/RESUME_2025_zephaniah_roe.pdf" target="_blank" rel="noreferrer">
               Resume
             </a>
             <a id="linklike" onClick={onViewLegacy}>
@@ -213,10 +213,10 @@ export default function Home({ onViewLegacy }) {
           <a href="https://www.linkedin.com/in/zephaniahroe/" target="_blank" rel="noreferrer">
             LinkedIn
           </a>
-          <span>·</span>
-          <a href="https://leetcode.com/zroe1/" target="_blank" rel="noreferrer">
+          {/* <span>·</span> */}
+          {/* <a href="https://leetcode.com/zroe1/" target="_blank" rel="noreferrer">
             LeetCode
-          </a>
+          </a> */}
         </footer>
       </div>
     </FootnoteProvider>

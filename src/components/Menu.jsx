@@ -168,7 +168,7 @@ const Menu = (props) => {
           <a
             className="menu-item animationThird"
             style={menuItemColor}
-            href="RESUME_2024.pdf"
+            href="RESUME_2025_zephaniah_roe.pdf"
             target="_blank">
             Resume
           </a>
