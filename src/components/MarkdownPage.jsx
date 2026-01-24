@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
@@ -27,11 +27,36 @@ export default function MarkdownPage() {
       .finally(() => setIsLoading(false));
   }, [slug]);
 
-  if (isLoading) return <div className="markdown-page">Loading…</div>;
-  if (error) return <div className="markdown-page">Error: {error}</div>;
+  if (isLoading)
+    return (
+      <div className="markdown-page">
+        <div className="markdown-topbar">
+          <Link to="/" className="markdown-home-link">
+            ← Home
+          </Link>
+        </div>
+        Loading…
+      </div>
+    );
+  if (error)
+    return (
+      <div className="markdown-page">
+        <div className="markdown-topbar">
+          <Link to="/" className="markdown-home-link">
+            ← Home
+          </Link>
+        </div>
+        Error: {error}
+      </div>
+    );
 
   return (
     <div className="markdown-page">
+      <div className="markdown-topbar">
+        <Link to="/" className="markdown-home-link">
+          ← Home
+        </Link>
+      </div>
       <ReactMarkdown
         remarkPlugins={[remarkGfm, remarkMath]}
         rehypePlugins={[rehypeRaw, rehypeKatex]}

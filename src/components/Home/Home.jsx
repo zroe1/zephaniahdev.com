@@ -6,7 +6,8 @@ import Footnotes from "../Footnote/Footnotes";
 import subliminalLearning from "../../assets/subliminal_learning.png";
 import tms from "../../assets/tms.jpeg";
 import jailbreak from "../../assets/jailbreak.png";
-import lm from "../../assets/lm.png";
+import xlab from "../../assets/xlab.png";
+import action from "../../assets/action.png";
 
 const PROJECTS = [
   {
@@ -49,16 +50,34 @@ const PROJECTS = [
 
 const WRITING = [
   {
+    title: "Principles for Meta-Science and AI Safety Replications",
+    summary: "Principles guiding our plan to replicate AI safety research.",
+    href: "/writing/meta_science",
+    image: "/images/meta_science.png",
+  },
+  {
+    title: "What Washington Says About AGI",
+    summary: "A survey of what US Congress publicly says about AGI, x-risk, and China.",
+    href: "/writing/washington_agi",
+    image: "/images/us.png",
+  },
+  {
+    title: "Against 'You can just do things'",
+    summary: "On balancing agency with coordination in social systems.",
+    href: "/writing/permission",
+    image: action,
+  },
+  {
+    title: "Introducing the XLab AI Security Guide",
+    summary: "A guide to AI security and safety from the UChicago XLab.",
+    href: "/writing/securityguide",
+    image: xlab,
+  },
+  {
     title: "Early Theory for Subliminal Learning",
     summary: "I introduce a simple geometric theory for subliminal learning.",
     href: "/writing/subliminal",
     image: subliminalLearning,
-  },
-  {
-    title: "Thoughts on Hand Crafting Language Models",
-    summary: "I discuss the potential of hand crafting language models.",
-    href: "/writing/handcrafting",
-    image: lm,
   },
   {
     title: "Intriguing Properties of gpt-oss Jailbreaks",

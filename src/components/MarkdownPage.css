@@ -4,15 +4,31 @@
   padding: 24px;
 }
 
+.markdown-topbar {
+  margin-bottom: 12px;
+}
+
+.markdown-home-link {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-weight: 600;
+  color: #d62a85; /* pink */
+  text-decoration: none;
+}
+
+.markdown-home-link:hover {
+  text-decoration: underline;
+}
+
 .markdown-page h1 {
   font-family: "Libre Baskerville", Georgia, serif;
   font-weight: 400;
-  font-size: 65px;
+  font-size: 60px;
   line-height: 1.1;
   margin: 0 0 1rem 0;
   color: #000000;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
   font-weight: 400;
 }
 
@@ -34,6 +50,23 @@
   margin-bottom: 1rem;
   font-family: "Libre Baskerville", Georgia, serif;
   font-size: 1.0rem;
+}
+
+.markdown-page ul,
+.markdown-page ol {
+  margin: 0 0 1rem 0;
+  padding-left: 2rem;
+}
+
+.markdown-page li {
+  line-height: 1.6;
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 1.0rem;
+  margin: 0.25rem 0;
+}
+
+.markdown-page li p {
+  margin-bottom: 0.75rem;
 }
 
 .markdown-page i {
