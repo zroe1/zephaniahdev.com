@@ -11,13 +11,13 @@ But this mindset has a dangerous edge case: it can make you skip asking for perm
 Here are two illustrative examples from my life (with details changed to protect the privacy of those involved) that motivated my thinking:
 
 - A close friend in high school (we call him friend #1) was faced with the pressure of finding a date to the prom lest he look like a total loser. Under the pressure of desperately trying to find someone to go to prom with, he realized that there was nothing stopping him from asking the girl that he had liked for years. He realized he could "just do things." The worst she could say is no!
-  
+
   Friend #1 asked out his love interest and she said yes. It turns out, however, that another one of his friends had gone on a few dates with her and assumed they would be going to prom together! Friend #1 knew about the dates but assumed this wasn't a big deal. _To friend #2, this was a very big deal._ The girl ended up changing her mind about prom and decided to go with no one because she didn't want to cause drama.
-  
+
   Everyone in the friend group took the side of friend #2 and friend #1 spent his prom night alone while his friends, who now were now upset with him, partied it up.
 
 - Person #1 agreed to start an EA club with person #2 at their college. Without consulting person #2, person #1 quickly got funding, recruited a faculty advisor and appointed themselves to be president on the newly created website they created. Person #1 reportedly gave themselves credit for "being agentic."
-  
+
   Although there was no explicit decision to be co-presidents, person #2 felt like they were cut out of the club that they collectively decided to start together and became skeptical of self-identified EAs and EA in general.
 
 My interpretation is not that people use "being agentic" as an excuse to be a bad person. I believe that people who "just do things" have neutral to good intentions but their initiative can get in the way of their actual goals.

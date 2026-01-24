@@ -127,7 +127,7 @@ export default function Home({ onViewLegacy }) {
           <nav className="home-nav">
             <a href="#projects">Projects</a>
             <a href="#writing">Writing</a>
-            <a href="/RESUME_2025_zephaniah_roe.pdf" target="_blank" rel="noreferrer">
+            <a href="/resume_zephaniah_roe.pdf" target="_blank" rel="noreferrer">
               Resume
             </a>
             <a id="linklike" onClick={onViewLegacy}>
